@@ -1,0 +1,128 @@
+@font-face {
+	font-family: "Whitney";
+	src: url("../fonts/whitneymedium.woff") format("woff");
+}
+
+/* open-sans-regular - latin-ext_latin */
+@font-face {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 400;
+	src: local(""),
+	url("../fonts/open-sans-v27-latin-ext_latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("../fonts/open-sans-v27-latin-ext_latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@keyframes blink {
+	from {
+		color: black;
+	}
+	50% {
+		color: #4324aa;
+	}
+	to {
+		color: black;
+	}
+}
+
+* {
+	box-sizing: border-box;
+	--dark-purple: #4324aa;
+}
+
+body {
+	font-family: Whitney, "Open Sans", Bahnschrift, Arial, sans-serif;
+	font-weight: 400;
+	font-size: 1.2rem;
+	line-height: 1.4;
+	color: black;
+
+	background-image: url("https://i.imgur.com/4oFKBnF.jpeg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+header {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 4px 4px black;
+	width: 100%;
+	padding: 10px;
+}
+
+main, footer {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+header, main, footer {
+	padding: 10px;
+	background-color: #a09896cc;
+}
+
+img:not(.res_icon):not(.pfp) {
+	max-width: 100%;
+	height: auto;
+	width: auto;
+	border: 2px solid black;
+	box-shadow: 5px 5px 3px black;
+}
+
+.res_icon {
+	width: 1.2rem;
+}
+
+a {
+	color: black;
+	text-decoration: underline;
+	transition: all 500ms;
+}
+
+a:hover {
+	color: var(--dark-purple)
+}
+
+h1, a.titre_principal {
+	color: var(--dark-purple);
+	margin-left: 20px;
+	text-decoration: none;
+	transition: all 300ms;
+	display: inline;
+}
+
+h1:hover, a.titre_principal:hover {
+	color: black;
+}
+
+h2 {
+	margin: 10px 0 0 0;
+}
+
+h2:target {
+	animation-name: blink;
+	animation-duration: 1000ms;
+}
+
+img.pfp {
+	border: 2px solid black;
+	box-shadow: 5px 5px 3px black;
+}
+
+.pfp {
+	width: 80px;
+	height: 80px;
+	display: inline;
+}
+
+.content {
+	max-width: 500px;
+}
+
+.content.header {
+	display: flex;
+	align-items: center;
+}
