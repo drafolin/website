@@ -14,19 +14,20 @@
 
 @keyframes blink {
 	from {
-		color: black;
+		color: white;
 	}
 	50% {
 		color: #4324aa;
 	}
 	to {
-		color: black;
+		color: white;
 	}
 }
 
 * {
 	box-sizing: border-box;
 	--dark-purple: #4324aa;
+	--blurple: #828CF6FF;
 }
 
 body {
@@ -34,7 +35,7 @@ body {
 	font-weight: 400;
 	font-size: 1.2rem;
 	line-height: 1.4;
-	color: black;
+	color: white;
 
 	background-image: url("https://i.imgur.com/4oFKBnF.jpeg");
 	background-attachment: fixed;
@@ -50,7 +51,9 @@ header {
 	align-items: center;
 	box-shadow: 0 4px 4px black;
 	width: 100%;
-	padding: 10px;
+	padding: 50px;
+	position: fixed;
+	z-index: 999;
 }
 
 main, footer {
@@ -61,7 +64,11 @@ main, footer {
 
 header, main, footer {
 	padding: 10px;
-	background-color: #a09896cc;
+	background-color: rgba(35, 39, 42, 0.82);
+}
+
+main {
+	padding-top: 100px;
 }
 
 img:not(.res_icon):not(.pfp) {
@@ -77,8 +84,8 @@ img:not(.res_icon):not(.pfp) {
 }
 
 a {
-	color: black;
-	text-decoration: underline;
+	color: var(--blurple);
+	text-decoration: none;
 	transition: all 500ms;
 }
 
@@ -87,7 +94,7 @@ a:hover {
 }
 
 h1, a.titre_principal {
-	color: var(--dark-purple);
+	color: var(--blurple);
 	margin-left: 20px;
 	text-decoration: none;
 	transition: all 300ms;
@@ -95,7 +102,7 @@ h1, a.titre_principal {
 }
 
 h1:hover, a.titre_principal:hover {
-	color: black;
+	color: var(--dark-purple);
 }
 
 h2 {
