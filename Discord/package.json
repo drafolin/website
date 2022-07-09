@@ -1,5 +1,5 @@
 {
-  "name": "dindin-nibnib.com",
+  "name": "discord",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -9,7 +9,6 @@
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1",
     "vue": "^3.2.37",
     "vue-router": "^4.0.16"
   },
