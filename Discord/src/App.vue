@@ -64,7 +64,7 @@ animation.value = 'disappear'
     </RouterLink>
 
     <div class="links">
-      <RouterLink to="/interface">Interface</RouterLink>>
+      <RouterLink to="/interface">Interface</RouterLink>
       <RouterLink to="/fonctionnalites">Fonctionnalités</RouterLink>
       <RouterLink to="/bots">Bots</RouterLink>
       <RouterLink to="/statistiques">Statistiques</RouterLink>
