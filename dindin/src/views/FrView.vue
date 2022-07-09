@@ -14,7 +14,7 @@ import { RouterLink } from 'vue-router'
 							<RouterLink to="fr/cv">Mon CV</RouterLink>
 						</li>
 						<li>
-							<a href="/Discord/index.html">Ma présentation de discord</a>
+							<a href="/fr/Discord/index.html">Ma présentation de discord</a>
 						</li>
 					</ul>
 				</nav>
