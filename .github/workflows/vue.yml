@@ -26,6 +26,7 @@ jobs:
           npm run build
           cd ..
           mkdir build
+          mkdir build/fr
           mkdir build/fr/Discord
           cp -r dindin/dist build
           cp -r Discord/dist build/fr/Discord
