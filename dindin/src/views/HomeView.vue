@@ -49,7 +49,7 @@ import { RouterLink } from 'vue-router'
 						<img src="../assets/icons/twitter-icon.png" alt="My twitter page">
 					</a></li>
 				<li class="telegram"><a href="https://t.me/dindin_nibnib">
-						<img src="../assets/icons/telegram-icon.svg-4063778145" alt="My telegram account">
+						<img src="../assets/icons/telegram-icon.png" alt="My telegram account">
 					</a></li>
 				<li class="discord"><a href="https://discordapp.com/users/373515998000840714">
 						<img src="../assets/icons/discord-icon.png" alt="My discord profile">

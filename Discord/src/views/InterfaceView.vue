@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { RouterLink } from 'vue-router'
+</script>
+
 <template>
 	<h1>Interface</h1>
 	<p>
@@ -11,7 +15,7 @@
 	<div class="light">
 		<h2>Disposition</h2>
 		<p>L'interface de discord est très simple à comprendre :</p>
-		<img alt="Schéma de disposition de l'interface" src="assets/images/disposition-interface.png">
+		<img alt="Schéma de disposition de l'interface" src="../assets/images/disposition-interface.png">
 
 	</div>
 	<h3>Liste de serveurs</h3>
@@ -72,7 +76,8 @@
 	<div class="nitro">
 		<h4>Nitro</h4>
 		<p>
-			Affiche un menu permettant d’acheter <a href="fonctionnalites.html#nitro">Discord Nitro</a>, un
+			Affiche un menu permettant d’acheter <RouterLink to="/fonctionnalites#nitro">Discord Nitro</RouterLink>,
+			un
 			abonnement
 			qui
 			offre plusieurs fonctionnalités supplémentaires à l’utilisateur.
@@ -88,7 +93,7 @@
 			ligne,
 			etc…
 		</p>
-		<img alt="Schéma de la zone de contenu" src="assets/images/contenu.png">
+		<img alt="Schéma de la zone de contenu" src="../assets/images/contenu.png">
 	</div>
 
 	<h3>Liste d'amis ou de membres</h3>

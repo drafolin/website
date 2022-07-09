@@ -8,13 +8,13 @@
 		<div class="emphasis">
 			Passer des appels vocaux ou vidéo.
 		</div>
-		<img alt="Exemple d'appel" class="appel center" src="assets/images/Appels.png">
+		<img alt="Exemple d'appel" class="appel center" src="../assets/images/Appels.png">
 	</div>
 
 	<div class="emphasis">
 		Garder contact avec vos amis et écouter leur musique
 	</div>
-	<img alt="Un ami qui écoute de la musique" class="musique center" src="assets/images/musique.png">
+	<img alt="Un ami qui écoute de la musique" class="musique center" src="../assets/images/musique.png">
 
 	<div class="light">
 		<div class="emphasis">
@@ -22,25 +22,25 @@
 		</div>
 		<div class="center status">
 			<div class="offline">
-				<img alt="Hors-ligne" class="status" src="assets/images/offline.png">
+				<img alt="Hors-ligne" class="status" src="../assets/images/offline.png">
 				<p class="center">
 					Hors-ligne
 				</p>
 			</div>
 			<div class="online">
-				<img alt="En ligne" class="status" src="assets/images/online.png">
+				<img alt="En ligne" class="status" src="../assets/images/online.png">
 				<p class="center">
 					En ligne
 				</p>
 			</div>
 			<div class="idle">
-				<img alt="Absent" class="status" src="assets/images/idle.png">
+				<img alt="Absent" class="status" src="../assets/images/idle.png">
 				<p class="center">
 					Absent
 				</p>
 			</div>
 			<div class="dnd">
-				<img alt="Ne pas déranger" class="status" src="assets/images/dnd.png">
+				<img alt="Ne pas déranger" class="status" src="../assets/images/dnd.png">
 				<p class="center">
 					Ne pas <br> déranger
 				</p>
@@ -51,8 +51,8 @@
 	<div class="emphasis">
 		Attirer l'attention
 	</div>
-	<img alt="Exemple de ping dans un serveur" class="server-ping" src="assets/images/server-ping.png">
-	<img alt="Exemple de ping dans un salon" class="channel-ping" src="assets/images/channel-ping.png">
+	<img alt="Exemple de ping dans un serveur" class="server-ping" src="../assets/images/server-ping.png">
+	<img alt="Exemple de ping dans un salon" class="channel-ping" src="../assets/images/channel-ping.png">
 
 	<div class="light">
 		<h2>Easter eggs</h2>
