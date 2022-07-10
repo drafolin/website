@@ -1,23 +1,15 @@
 <template>
-	<header>
-		<div class="content header">
-			<a class="pfp" href="/src/assets/dindin.png">
-				<img alt="Photo de profil agrandie" class="pfp" src="../assets/dindin-lightweight.png" />
-			</a>
-			<a class="titre_principal" href="https://www.dindin-nibnib.com">
-				<h1 class="titre_principal">Beuchat Odin</h1>
-			</a>
-		</div>
-	</header>
-
-	<main>
+	<main class="p-4">
+		<h1>Odin Beuchat</h1>
 		<div class="content">
-			<h3>Summary</h3>
-			<ul>
-				<li><a href="#exp">My experiences</a></li>
-				<li><a href="#comp">My skills</a></li>
-				<li><a href="#form">My formation</a></li>
-			</ul>
+			<h2>Summary</h2>
+			<nav>
+				<ul>
+					<li><a href="#exp">My experiences</a></li>
+					<li><a href="#comp">My skills</a></li>
+					<li><a href="#form">My formation</a></li>
+				</ul>
+			</nav>
 
 			<h2 id="exp">My experiences</h2>
 			<ul>
@@ -54,11 +46,6 @@
 			</ol>
 		</div>
 	</main>
-	<footer>
-		<div class="content">
-			©2021 - Odin Beuchat | <a href="mailto:odinbeuchat.ob@ikmail.com">odinbeuchat.ob@ikmail.com</a>
-		</div>
-	</footer>
 </template>
 
 <style>

@@ -1,9 +1,15 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
+import TheFooter from './components/TheFooter.vue';
+import TheHeader from './components/TheHeader.vue';
 </script>
 
 <template>
-  <RouterView />
+  <div class="bg-dark-transparent p-0">
+    <TheHeader />
+    <RouterView />
+    <TheFooter />
+  </div>
 </template>
 
 <style>
@@ -11,55 +17,19 @@ import { RouterView } from 'vue-router'
        General
 ********************/
 
-* {
-  box-sizing: border-box;
-}
+
 
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  padding: 0 10px;
   font-family: Whitney, Bahnschrift, Helvetica, sans-serif;
   color: white;
   background-image: url("https://i.imgur.com/4oFKBnF.jpeg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-}
-
-header,
-main,
-footer {
-  max-width: 500px;
-  width: 100%;
-  background-color: #23272acc;
-  padding: 0 20px;
-}
-
-h1 {
-  margin-bottom: 10px;
-}
-
-a {
-  color: #7655e3;
-  text-decoration: none;
-  transition: all 300ms ease-in-out;
-}
-
-a:hover {
-  color: #ffffff;
-}
-
-/******************
-       Header
-*******************/
-
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 /******************
