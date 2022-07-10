@@ -56,11 +56,6 @@
 			</ol>
 		</div>
 	</main>
-	<footer>
-		<div class="content">
-			©2021 - Odin Beuchat | <a href="mailto:odinbeuchat.ob@icloud.com">odinbeuchat.ob@icloud.com</a>
-		</div>
-	</footer>
 </template>
 
 <style>

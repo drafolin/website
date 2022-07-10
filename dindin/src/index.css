@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	* {
+		@apply box-border;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		@apply font-bold;
+	}
+
+	h1 {
+		@apply text-4xl mt-5;
+	}
+
+	h2 {
+		@apply text-3xl mt-4;
+	}
+	
+	h3 {
+		@apply text-2xl mt-3;
+	}
+
+	h4 {
+		@apply text-xl mt-2;
+	}
+
+	h5 {
+		@apply text-lg mt-1;
+	}
+
+	:not(header) a {
+		@apply text-light-violet hover:text-white transition-all;
+	}
+
+	p {
+		@apply my-2;
+	}
+
+	ul {
+		@apply list-disc ml-6;
+	}
+
+	li {
+		@apply pl-3;
+	}
+
+	li > ul {
+		@apply list-circle;
+	}
+
+	nav ul {
+		@apply list-none m-0;
+	}
+
+	nav li {
+		@apply m-0;
+	}
+	
+	main {
+		@apply flex flex-col;
+	}
+
+	body {
+		@apply dark:bg-dark-transparent;
+	}
+	ol {
+		@apply list-decimal ml-6;
+	}
+}
