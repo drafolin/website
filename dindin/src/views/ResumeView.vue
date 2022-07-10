@@ -33,7 +33,12 @@
 				<li>C++</li>
 				<li>JavaScript (web and Node.JS)</li>
 				<li>TypeScript</li>
-				<li>HTML/CSS</li>
+				<li>Web dev
+					<ul>
+						<li>Vanilla html/css</li>
+						<li>Vuejs</li>
+					</ul>
+				</li>
 				<li>PHP</li>
 				<li>Python</li>
 				<li>C#</li>
