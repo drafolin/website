@@ -1,10 +1,6 @@
-<script setup lang="ts">
-import { RouterLink } from 'vue-router'
-</script>
-
 <template>
 	<main class="p-4">
-		<h1>dindin|nibnib</h1>
+		<h1>Hello! <em>dindin|nibnib</em> here!</h1>
 		<section class="introduction">
 			<h2>Introduction</h2>
 			<p>Hey there! My name's <strong>dindin|nibnib</strong>.
@@ -42,7 +38,7 @@ import { RouterLink } from 'vue-router'
 						<p>I am building a site for the barber salon of one of my family members.</p>
 					</div>
 
-					<div class="bg-discord-blurple	/40 p-5 w-1/2 pb-7 rounded-3xl m-5">
+					<div class="bg-discord-blurple/40	/40 p-5 w-1/2 pb-7 rounded-3xl m-5">
 						<img class="rounded-2xl float-right ml-10 max-w-60" src="../assets/r-wof-bot-screenshot.png"
 							alt="Preview of the discord bot">
 						<h3><a href="https://github.com/r-wingsoffire/r-wof-bot" class="text-white">r/Wingsoffire
@@ -64,6 +60,4 @@ import { RouterLink } from 'vue-router'
 			</ul>
 		</section>
 	</main>
-
-
 </template>

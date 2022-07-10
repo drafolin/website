@@ -20,7 +20,7 @@
 			</ul>
 
 			<h2 id="comp">My skills</h2>
-			<b>Programmation:</b>
+			<h3>Programmation:</h3>
 			<ul>
 				<li>C++</li>
 				<li>JavaScript (web and Node.JS)</li>

@@ -11,6 +11,7 @@
   "dependencies": {
     "normalize.css": "^8.0.1",
     "vue": "^3.2.37",
+    "vue-property-decorator": "^9.1.2",
     "vue-router": "^4.0.16"
   },
   "devDependencies": {

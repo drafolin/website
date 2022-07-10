@@ -18,6 +18,12 @@ module.exports = {
       },
       maxWidth: {
         60: "240px"
+      },
+      backgroundImage: {
+        "dragon-bg": "url(https://i.imgur.com/4oFKBnF.jpeg)",
+      },
+      fontFamily: {
+        sans: ["Whitney", "Bahnschrift", "Helvetica", "sans-serif"]
       }
     },
   },
