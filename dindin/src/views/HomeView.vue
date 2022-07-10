@@ -4,12 +4,12 @@ import { RouterLink } from 'vue-router'
 
 <template>
 	<header>
-		<a href="/src/assets/dindin.png"><img src="../assets/dindin-lightweight.png" style="height: 20vw; width:20vw"
-				alt="Image of my sona, eyesopener."></a>
+		<a href="/src/assets/dindin.png"><img src="../assets/dindin-lightweight.png" class="rounded-lg my-8"
+				style="height: 20vw; width:20vw" alt="Image of my sona, eyesopener."></a>
 	</header>
 
 	<main>
-		<h1>dindin|nibnib</h1>
+		<h1 class="text-2xl font-bold">dindin|nibnib</h1>
 		<section class="introduction">
 			<h2>Introduction</h2>
 			<p>Hey there! My name's <strong>dindin|nibnib</strong>.
