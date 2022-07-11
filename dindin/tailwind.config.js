@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors: {
         "light-violet": "#7655e3",
+        "dark-gray": "#23272a",
         "dark-transparent": "#23272acc",
         "transparent-violet": "#7655e322",
         "red-attractifs": "#fd3356",
@@ -24,6 +25,9 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Whitney", "Bahnschrift", "Helvetica", "sans-serif"]
+      },
+      spacing: {
+        "header-height": "104px"
       }
     },
   },

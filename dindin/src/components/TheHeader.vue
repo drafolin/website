@@ -10,6 +10,8 @@ let projectsPath = ref("/projects");
 let resumePath = ref("/cv");
 let frPath = ref("/fr");
 
+const menuDivStyle = ref("absolute bg-dark-gray py-10 inset-x-0 top-header-height");
+
 const toggleFrench = () => {
 	if (window.location.href.includes("fr")) {
 		home.value = "Accueil";
@@ -36,7 +38,7 @@ const toggleFrench = () => {
 </script>
 
 <template>
-	<header class="shadow-lg dark:shadow-neutral-800 w-full p-4 py-8">
+	<header class="shadow-lg dark:shadow-neutral-800 w-full p-4 py-8 hidden lg:block">
 		<nav class="flex content-center items-center justify-between h-10">
 			<div class="flex items-center">
 				<img src="../assets/dindin-lightweight.png" class="rounded-full h-10"
@@ -68,5 +70,47 @@ const toggleFrench = () => {
 				</li>
 			</ul>
 		</nav>
+	</header>
+
+	<header class="shadow-lg dark:shadow-neutral-800 w-full p-4 py-8 block lg:hidden">
+		<nav class="flex content-center items-center justify-between h-10 px-5">
+			<div class="flex items-center">
+				<img src="../assets/dindin-lightweight.png" class="rounded-full h-10"
+					alt="Image of my sona, eyesopener." />
+			</div>
+
+			<a href="javascript:void(0)" @click="" class="hamburger">
+				<span class="block rounded-full bg-neutral-700 dark:bg-white h-1 w-7 mb-2"></span>
+				<span class="block rounded-full bg-neutral-700 dark:bg-white h-1 w-7 mb-2"></span>
+				<span class="block rounded-full bg-neutral-700 dark:bg-white h-1 w-7"></span>
+			</a>
+		</nav>
+
+		<div :class="menuDivStyle">
+			<ul class="flex flex-col list-none">
+				<li class="align-middle h-fit mb-8">
+					<RouterLink class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700" :to="root">
+						{{ home }}
+					</RouterLink>
+				</li>
+				<li class="align-middle h-fit mb-8">
+					<RouterLink class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700"
+						:to="projectsPath">{{ projects }}
+					</RouterLink>
+				</li>
+				<li class="align-middle h-fit mb-8">
+					<RouterLink class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700"
+						:to="resumePath">
+						{{ resume }}
+					</RouterLink>
+				</li>
+				<li class="align-middle h-fit mb-8">
+					<RouterLink v-on:click.passive="toggleFrench"
+						class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700" :to="frPath">
+						{{ toggleFR }}
+					</RouterLink>
+				</li>
+			</ul>
+		</div>
 	</header>
 </template>

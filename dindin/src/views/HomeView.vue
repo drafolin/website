@@ -31,16 +31,16 @@
 			<ul class="list-none">
 				<li>
 					<div class="bg-red-attractifs/40 p-5 w-1/2 pb-11 rounded-3xl m-5">
-						<img class="rounded-2xl float-right ml-10 max-w-60" src="../assets/attractifs-preview.png"
-							alt="Preview of the Attrac'tifs website'">
+						<img class="rounded-2xl w-full max-w-60 lg:float-right lg:ml-10 lg:max-w-60"
+							src="../assets/attractifs-preview.png" alt="Preview of the Attrac'tifs website'">
 						<h3><a href="https://github.com/dindin-nibnib/attractifs" class="text-white">Attrac'tifs</a>
 						</h3>
 						<p>I am building a site for the barber salon of one of my family members.</p>
 					</div>
 
-					<div class="bg-discord-blurple/40	/40 p-5 w-1/2 pb-7 rounded-3xl m-5">
-						<img class="rounded-2xl float-right ml-10 max-w-60" src="../assets/r-wof-bot-screenshot.png"
-							alt="Preview of the discord bot">
+					<div class="bg-discord-blurple/40 p-5 w-1/2 pb-7 rounded-3xl m-5">
+						<img class="rounded-2xl w-full max-w-60 lg:float-right lg:ml-10 lg:max-w-60"
+							src="../assets/r-wof-bot-screenshot.png" alt="Preview of the discord bot">
 						<h3><a href="https://github.com/r-wingsoffire/r-wof-bot" class="text-white">r/Wingsoffire
 								discord bot</a></h3>
 						<p>I am building a discord bot for the r/Wingsoffire discord server.</p>
@@ -48,9 +48,9 @@
 
 					<div class="bg-blue-700/40 p-5 w-1/2 pb-7 rounded-3xl m-5">
 						<img src="https://cdn.discordapp.com/icons/981917730737360916/2e4e3dccaae4527b96836b7848152253.webp?size=240"
-							class="rounded-2xl float-right ml-10 max-h-60" alt="Icon of cobbalt">
-						<h3 class="mt-0"><a href="https://github.com/devs-of-cobbalt/cobbalt"
-								class="text-white">Cobbalt</a></h3>
+							class="rounded-2xl w-full max-w-60 lg:float-right lg:ml-10 lg:max-h-60"
+							alt="Icon of cobbalt">
+						<h3><a href="https://github.com/devs-of-cobbalt/cobbalt" class="text-white">Cobbalt</a></h3>
 						<p>I am working on a mod creator helper for minecraft. It will be usable for both advanced and
 							begginner mod creators, featuring a compiler allowing cross-version mod creation without
 							changing the base code.</p>
