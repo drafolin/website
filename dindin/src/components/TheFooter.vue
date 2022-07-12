@@ -1,6 +1,23 @@
+<script setup lang="ts">
+import { ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+const findText = ref("Find me on:");
+
+watch(() => route.path, async (path) => {
+	if (path.includes("fr")) {
+		findText.value = "Trouvez-moi sur:";
+	} else {
+		findText.value = "Find me on:";
+	}
+})
+
+</script>
+
 <template>
 	<footer class="flex flex-col pt-4 px-4 items-center">
-		<span>Find me on:</span>
+		<span>{{ findText }}</span>
 		<nav class="max-w-xl w-full self-center">
 			<ul class="social flex justify-evenly list-none m-2 p-0 w-full">
 				<li class="inline m-2 github"><a href="https://github.com/dindin-nibnib">
