@@ -1,5 +1,5 @@
 <template>
-	<footer class="flex flex-col pt-4 px-4">
+	<footer class="flex flex-col pt-4 px-4 items-center">
 		<span>Find me on:</span>
 		<nav class="max-w-xl w-full self-center">
 			<ul class="social flex justify-evenly">
@@ -25,8 +25,8 @@
 					</a></li>
 			</ul>
 		</nav>
-		<div class="dark:text-gray-400 text-sm self-center mt-4">
+		<span class="dark:text-gray-400 text-xs lg:text-sm self-center mt-4">
 			©2021-2022 - Odin Beuchat | <a href="mailto:odinbeuchat.ob@icloud.com">odinbeuchat.ob@icloud.com</a>
-		</div>
+		</span>
 	</footer>
 </template>

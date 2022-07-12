@@ -45,6 +45,9 @@ const toggleMenu = () => {
 	} else {
 		overlayDisplay.value = "opacity-0";
 		menuDivStyle.value = "fixed shadow-sandwiched bg-paper-white dark:bg-dark-gray py-10 inset-x-0 transition-all animate-menu-open-anim";
+		setTimeout(() => {
+			overlayDisplay.value = "opacity-0 hidden";
+		}, 150);
 	}
 
 	menuOpen = !menuOpen;
