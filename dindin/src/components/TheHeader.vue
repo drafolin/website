@@ -1,46 +1,42 @@
 <script setup lang="ts">import { ref, watch } from 'vue';
-import { useRoute } from 'vue-router';
+import { useLanguage } from '@/store/language';
 
 let home = ref("Home");
 let projects = ref("Projects");
 let resume = ref("Resume");
 let toggleFR = ref("Switch to Fr");
 
-let root = ref("/");
-let projectsPath = ref("/projects");
-let resumePath = ref("/cv");
-let frPath = ref("/fr");
+const lang = useLanguage();
 
 const menuDivStyle = ref("fixed drop-shadow-lg bg-paper-white dark:bg-dark-gray py-10 inset-x-0 z-m1 -top-full");
-const overlayDisplay = ref("opacity-0");
+const overlayDisplay = ref("opacity-0 hidden");
 var menuOpened = false;
 
-const route = useRoute()
+if (lang.lang === "fr") {
+	home.value = "Accueil";
+	projects.value = "Projets";
+	resume.value = "CV";
+	toggleFR.value = "Passer en En";
+} else {
+	home.value = "Home";
+	projects.value = "Projects";
+	resume.value = "Resume";
+	toggleFR.value = "Switch to Fr";
+}
 
-watch(() => route.path, async (path) => {
-	toggleMenu(false);
-	if (path.includes("fr")) {
+watch(() => lang.lang, async (lang) => {
+	if (lang === "fr") {
 		home.value = "Accueil";
 		projects.value = "Projets";
 		resume.value = "CV";
-		toggleFR.value = "Passer à en";
-
-		root.value = "/fr";
-		projectsPath.value = "/fr/projets";
-		resumePath.value = "/fr/cv";
-		frPath.value = "/";
+		toggleFR.value = "Passer en En";
 	} else {
 		home.value = "Home";
 		projects.value = "Projects";
 		resume.value = "Resume";
 		toggleFR.value = "Switch to Fr";
-
-		root.value = "/";
-		projectsPath.value = "/projets";
-		resumePath.value = "/cv";
-		frPath.value = "/fr";
 	}
-})
+});
 
 const toggleMenu = (open?: boolean) => {
 	if (open === undefined ? !menuOpened : open) {
@@ -73,26 +69,26 @@ const toggleMenu = (open?: boolean) => {
 			</RouterLink>
 			<ul class="flex list-none h-fit">
 				<li class="align-middle h-fit">
-					<RouterLink class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700" :to="root">
+					<RouterLink class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700" to="/">
 						{{ home }}
 					</RouterLink>
 				</li>
 				<li class="align-middle h-fit">
 					<RouterLink class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700"
-						:to="projectsPath">{{ projects }}
+						to="/projects">{{ projects }}
 					</RouterLink>
 				</li>
 				<li class="align-middle h-fit">
-					<RouterLink class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700"
-						:to="resumePath">
+					<RouterLink class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700" to="/cv">
 						{{ resume }}
 					</RouterLink>
 				</li>
 				<li class="align-middle h-fit">
-					<RouterLink class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700"
-						:to="frPath">
+					<a href="javascript:void(0)"
+						class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700"
+						@click="lang.toggleLanguage()">
 						{{ toggleFR }}
-					</RouterLink>
+					</a>
 				</li>
 			</ul>
 		</nav>
@@ -118,29 +114,28 @@ const toggleMenu = (open?: boolean) => {
 				<li class="align-middle h-fit p-0">
 					<RouterLink
 						class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700"
-						:to="root">
+						to="/">
 						<strong class="dark:text-white">{{ home }}</strong>
 					</RouterLink>
 				</li>
 				<li class="align-middle h-fit p-0">
 					<RouterLink
 						class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700"
-						:to="projectsPath"><strong class="dark:text-white">{{ projects }}</strong>
+						to="/projects"><strong class="dark:text-white">{{ projects }}</strong>
 					</RouterLink>
 				</li>
 				<li class="align-middle h-fit p-0">
 					<RouterLink
 						class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700"
-						:to="resumePath">
+						to="/cv">
 						<strong class="dark:text-white">{{ resume }}</strong>
 					</RouterLink>
 				</li>
 				<li class="align-middle h-fit p-0">
-					<RouterLink
-						class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700"
-						:to="frPath">
+					<a href="javascript:void(0)" @click="lang.toggleLanguage()"
+						class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700">
 						<strong class="dark:text-white">{{ toggleFR }}</strong>
-					</RouterLink>
+					</a>
 				</li>
 			</ul>
 		</div>
