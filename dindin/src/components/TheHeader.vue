@@ -61,11 +61,11 @@ const toggleMenu = () => {
 	<header
 		class="bg-paper-white dark:bg-dark-gray fixed shadow-lg dark:shadow-neutral-800 bg- w-full p-4 py-8 hidden lg:block">
 		<nav class="flex content-center items-center justify-between h-10">
-			<div class="flex items-center">
+			<RouterLink to="/" class="flex items-center text-white">
 				<img src="../assets/dindin-lightweight.png" class="rounded-full h-10"
 					alt="Image of my sona, eyesopener." />
 				<span class="ml-4">dindin|nibnib</span>
-			</div>
+			</RouterLink>
 			<ul class="flex list-none h-fit">
 				<li class="align-middle h-fit">
 					<RouterLink class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700" :to="root">
@@ -96,10 +96,10 @@ const toggleMenu = () => {
 	<header
 		class="bg-paper-white dark:bg-dark-gray fixed shadow-lg dark:shadow-neutral-800 w-full p-4 py-8 block lg:hidden">
 		<nav class="flex content-center items-center justify-between h-10 px-5">
-			<div class="flex items-center">
+			<RouterLink to="/" class="flex items-center text-white">
 				<img src="../assets/dindin-lightweight.png" class="rounded-full h-10"
-					alt="Image of my sona, eyesopener." />
-			</div>
+					alt="Image of my sona, eyesopener.">
+			</RouterLink>
 
 			<a href="javascript:void(0)" @click="toggleMenu" class="hamburger">
 				<span class="block rounded-full bg-neutral-700 dark:bg-white h-1 w-7 mb-2"></span>
