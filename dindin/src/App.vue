@@ -6,8 +6,8 @@ import TheHeader from './components/TheHeader.vue';
 
 <template>
   <div class="bg-dragon-bg bg-fixed bg-cover bg-center dark:text-white font-sans">
-    <div class="bg-white/60 dark:bg-dark-transparent p-0">
-      <TheHeader />
+    <TheHeader />
+    <div class="pt-24 bg-white/60 dark:bg-dark-transparent p-0">
       <RouterView />
       <TheFooter />
     </div>
