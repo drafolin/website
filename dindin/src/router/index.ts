@@ -14,11 +14,6 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: "/fr",
-      name: "fr",
-      component: FrView,
-    },
-    {
       path: "/cv",
       name: "cv",
       component: CvView,
@@ -27,11 +22,6 @@ const router = createRouter({
       path: "/:pathMatch(.*)*",
       name: "404",
       component: PageNotFoundView,
-    },
-    {
-      path: "/fr/cv",
-      name: "cv-fr",
-      component: FrCvView,
     },
   ],
 });

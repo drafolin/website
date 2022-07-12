@@ -1,9 +1,21 @@
+<script setup lang='ts'>
+import { useLanguage } from '@/store/language';
+import { watch, ref } from 'vue';
+
+const language = useLanguage();
+
+</script>
+
 <template>
 	<main class="p-4">
-		<h1>Hello! <em>dindin|nibnib</em> here!</h1>
+		<h1>{{ language.lang === "en" ? "Hello! " : "Salut! Moi c'est " }}<em>dindin|nibnib</em>{{ language.lang ===
+				"en"
+				? " here!" : "!"
+		}}</h1>
 		<section class="introduction">
 			<h2>Introduction</h2>
-			<p>Hey there! My name's <strong>dindin|nibnib</strong>.
+			<p>{{ language.lang === "en" ? "Hey there! My name's" : "Hello! Je m'appelle "
+			}}<strong>dindin|nibnib</strong>.
 				Though you can call me dindin, the "|nibnib" part is silent!
 				I am an IT guy that programs loads of random things!
 				My main language is ts (please don't hurt me), though I also know python and c++
