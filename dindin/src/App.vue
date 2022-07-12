@@ -13,24 +13,3 @@ import TheHeader from './components/TheHeader.vue';
     </div>
   </div>
 </template>
-
-<style>
-footer img {
-  max-width: 70px;
-  max-height: 70px;
-  width: 100%;
-}
-
-footer ul {
-  list-style: none;
-  margin: 10px;
-  padding: 0;
-  width: 100%;
-  display: flex;
-}
-
-footer li {
-  display: inline;
-  margin: 10px;
-}
-</style>

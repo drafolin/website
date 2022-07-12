@@ -21,8 +21,12 @@ module.exports = {
       listStyleType: {
         circle: "circle"
       },
+      maxHeight: {
+        xs: "70px",
+      },
       maxWidth: {
-        60: "240px"
+        60: "240px",
+        xs: "70px"
       },
       backgroundImage: {
         "dragon-bg": "url(https://i.imgur.com/4oFKBnF.jpeg)",
