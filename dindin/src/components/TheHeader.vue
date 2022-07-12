@@ -10,6 +10,10 @@ let projectsPath = ref("/projects");
 let resumePath = ref("/cv");
 let frPath = ref("/fr");
 
+const menuDivStyle = ref("fixed drop-shadow-lg bg-paper-white dark:bg-dark-gray py-10 inset-x-0 z-m1 -top-full");
+const overlayDisplay = ref("opacity-0");
+var menuOpen = false;
+
 const toggleFrench = () => {
 	if (window.location.href.includes("fr")) {
 		home.value = "Accueil";
@@ -33,10 +37,29 @@ const toggleFrench = () => {
 		frPath.value = "/fr";
 	}
 }
+
+const toggleMenu = () => {
+	if (!menuOpen) {
+		overlayDisplay.value = "opacity-100";
+		menuDivStyle.value = "fixed shadow-sandwiched bg-paper-white dark:bg-dark-gray py-10 inset-x-0 transition-all animate-menu-close-anim";
+	} else {
+		overlayDisplay.value = "opacity-0";
+		menuDivStyle.value = "fixed shadow-sandwiched bg-paper-white dark:bg-dark-gray py-10 inset-x-0 transition-all animate-menu-open-anim";
+		setTimeout(() => {
+			overlayDisplay.value = "opacity-0 hidden";
+		}, 150);
+	}
+
+	menuOpen = !menuOpen;
+}
 </script>
 
-<template>
-	<header class="shadow-lg dark:shadow-neutral-800 w-full p-4 py-8">
+<template >
+	<div :class="`fixed inset-x-0 bottom-0 top-header-height bg-dark-gray/70 transition-all ${overlayDisplay}`">
+	</div>
+
+	<header
+		class="bg-paper-white dark:bg-dark-gray fixed shadow-lg dark:shadow-neutral-800 bg- w-full p-4 py-8 hidden lg:block">
 		<nav class="flex content-center items-center justify-between h-10">
 			<div class="flex items-center">
 				<img src="../assets/dindin-lightweight.png" class="rounded-full h-10"
@@ -68,5 +91,53 @@ const toggleFrench = () => {
 				</li>
 			</ul>
 		</nav>
+	</header>
+
+	<header
+		class="bg-paper-white dark:bg-dark-gray fixed shadow-lg dark:shadow-neutral-800 w-full p-4 py-8 block lg:hidden">
+		<nav class="flex content-center items-center justify-between h-10 px-5">
+			<div class="flex items-center">
+				<img src="../assets/dindin-lightweight.png" class="rounded-full h-10"
+					alt="Image of my sona, eyesopener." />
+			</div>
+
+			<a href="javascript:void(0)" @click="toggleMenu" class="hamburger">
+				<span class="block rounded-full bg-neutral-700 dark:bg-white h-1 w-7 mb-2"></span>
+				<span class="block rounded-full bg-neutral-700 dark:bg-white h-1 w-7 mb-2"></span>
+				<span class="block rounded-full bg-neutral-700 dark:bg-white h-1 w-7"></span>
+			</a>
+		</nav>
+
+		<div :class="menuDivStyle">
+			<ul class="flex flex-col list-none mx-8">
+				<li class="align-middle h-fit p-0">
+					<RouterLink
+						class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700"
+						:to="root">
+						<strong class="dark:text-white">{{ home }}</strong>
+					</RouterLink>
+				</li>
+				<li class="align-middle h-fit p-0">
+					<RouterLink
+						class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700"
+						:to="projectsPath"><strong class="dark:text-white">{{ projects }}</strong>
+					</RouterLink>
+				</li>
+				<li class="align-middle h-fit p-0">
+					<RouterLink
+						class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700"
+						:to="resumePath">
+						<strong class="dark:text-white">{{ resume }}</strong>
+					</RouterLink>
+				</li>
+				<li class="align-middle h-fit p-0">
+					<RouterLink v-on:click.passive="toggleFrench"
+						class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700"
+						:to="frPath">
+						<strong class="dark:text-white">{{ toggleFR }}</strong>
+					</RouterLink>
+				</li>
+			</ul>
+		</div>
 	</header>
 </template>
