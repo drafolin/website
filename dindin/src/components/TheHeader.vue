@@ -1,4 +1,5 @@
-<script setup lang="ts">import { ref } from 'vue';
+<script setup lang="ts">import { ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
 
 let home = ref("Home");
 let projects = ref("Projects");
@@ -12,10 +13,13 @@ let frPath = ref("/fr");
 
 const menuDivStyle = ref("fixed drop-shadow-lg bg-paper-white dark:bg-dark-gray py-10 inset-x-0 z-m1 -top-full");
 const overlayDisplay = ref("opacity-0");
-var menuOpen = false;
+var menuOpened = false;
 
-const toggleFrench = () => {
-	if (window.location.href.includes("fr")) {
+const route = useRoute()
+
+watch(() => route.path, async (path) => {
+	toggleMenu(false);
+	if (path.includes("fr")) {
 		home.value = "Accueil";
 		projects.value = "Projets";
 		resume.value = "CV";
@@ -36,10 +40,10 @@ const toggleFrench = () => {
 		resumePath.value = "/cv";
 		frPath.value = "/fr";
 	}
-}
+})
 
-const toggleMenu = () => {
-	if (!menuOpen) {
+const toggleMenu = (open?: boolean) => {
+	if (open === undefined ? !menuOpened : open) {
 		overlayDisplay.value = "opacity-100";
 		menuDivStyle.value = "fixed shadow-sandwiched bg-paper-white dark:bg-dark-gray py-10 inset-x-0 transition-all animate-menu-close-anim";
 	} else {
@@ -50,12 +54,12 @@ const toggleMenu = () => {
 		}, 150);
 	}
 
-	menuOpen = !menuOpen;
+	if (open === undefined) menuOpened = !menuOpened;
 }
 </script>
 
 <template >
-	<div @click="toggleMenu"
+	<div @click="toggleMenu()"
 		:class="`fixed inset-x-0 bottom-0 top-header-height bg-dark-gray/70 transition-all ${overlayDisplay}`">
 	</div>
 
@@ -85,8 +89,8 @@ const toggleMenu = () => {
 					</RouterLink>
 				</li>
 				<li class="align-middle h-fit">
-					<RouterLink v-on:click.passive="toggleFrench"
-						class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700" :to="frPath">
+					<RouterLink class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700"
+						:to="frPath">
 						{{ toggleFR }}
 					</RouterLink>
 				</li>
@@ -102,7 +106,7 @@ const toggleMenu = () => {
 					alt="Image of my sona, eyesopener.">
 			</RouterLink>
 
-			<a href="javascript:void(0)" @click="toggleMenu" class="hamburger">
+			<a href="javascript:void(0)" @click="toggleMenu()" class="hamburger">
 				<span class="block rounded-full bg-neutral-700 dark:bg-white h-1 w-7 mb-2"></span>
 				<span class="block rounded-full bg-neutral-700 dark:bg-white h-1 w-7 mb-2"></span>
 				<span class="block rounded-full bg-neutral-700 dark:bg-white h-1 w-7"></span>
@@ -132,7 +136,7 @@ const toggleMenu = () => {
 					</RouterLink>
 				</li>
 				<li class="align-middle h-fit p-0">
-					<RouterLink v-on:click.passive="toggleFrench"
+					<RouterLink
 						class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700"
 						:to="frPath">
 						<strong class="dark:text-white">{{ toggleFR }}</strong>
