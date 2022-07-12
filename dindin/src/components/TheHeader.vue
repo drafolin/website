@@ -55,7 +55,8 @@ const toggleMenu = () => {
 </script>
 
 <template >
-	<div :class="`fixed inset-x-0 bottom-0 top-header-height bg-dark-gray/70 transition-all ${overlayDisplay}`">
+	<div @click="toggleMenu"
+		:class="`fixed inset-x-0 bottom-0 top-header-height bg-dark-gray/70 transition-all ${overlayDisplay}`">
 	</div>
 
 	<header
