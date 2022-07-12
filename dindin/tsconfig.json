@@ -18,5 +18,8 @@
     {
       "path": "./tsconfig.config.json"
     }
+  ],
+  "types": [
+    "@pinia/nuxt"
   ]
 }

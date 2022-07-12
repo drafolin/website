@@ -1,18 +1,17 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
-import { useRoute } from 'vue-router';
+import { useLanguage } from '@/store/language';
 
-const route = useRoute();
+const language = useLanguage();
 const findText = ref("Find me on:");
 
-watch(() => route.path, async (path) => {
-	if (path.includes("fr")) {
+watch(() => language.lang, async (lang) => {
+	if (lang === "fr") {
 		findText.value = "Trouvez-moi sur:";
 	} else {
 		findText.value = "Find me on:";
 	}
 })
-
 </script>
 
 <template>
