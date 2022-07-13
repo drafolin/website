@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import FrView from "../views/FrView.vue";
 import PageNotFoundView from "../views/404View.vue";
 import CvView from "../views/ResumeView.vue";
 import FrCvView from "../views/CvView.vue";

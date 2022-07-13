@@ -1,6 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
 import { useI18n } from 'vue-i18n';
+
+const route = useRoute();
 
 const messages = {
 	en: {
@@ -22,6 +25,10 @@ const { t, locale } = useI18n({ messages, useScope: 'global' });
 const menuDivStyle = ref("fixed drop-shadow-lg bg-paper-white dark:bg-dark-gray py-10 inset-x-0 z-m1 -top-full");
 const overlayDisplay = ref("opacity-0 hidden");
 var menuOpened = false;
+
+watch(() => route.path, () => {
+	toggleMenu(false);
+})
 
 const toggleMenu = (open?: boolean) => {
 	if (open === undefined ? !menuOpened : open) {
