@@ -1,12 +1,8 @@
 <script setup lang="ts">
-import { RouterView, RouterLink, useRoute } from 'vue-router'
+import { RouterView } from 'vue-router'
 import TheFooter from './components/TheFooter.vue';
 import TheHeader from './components/TheHeader.vue';
-import { useI18n } from 'vue-i18n';
 
-const route = useRoute()
-const { locale } = useI18n({ useScope: 'global' })
-locale.value = `${route.query.lang}` || "en"
 </script>
 
 <template>

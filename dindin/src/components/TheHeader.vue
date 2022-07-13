@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { onMounted, ref, toRaw, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 
@@ -21,10 +21,13 @@ const messages = {
 }
 
 const { t, locale } = useI18n({ messages, useScope: 'global' });
-
 const menuDivStyle = ref("fixed drop-shadow-lg bg-paper-white dark:bg-dark-gray py-10 inset-x-0 z-m1 -top-full");
 const overlayDisplay = ref("opacity-0 hidden");
 var menuOpened = false;
+
+watch(() => route.query, () => {
+	locale.value = `${route.query.lang || 'en'}`;
+});
 
 watch(() => route.path, () => {
 	toggleMenu(false);
