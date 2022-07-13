@@ -1,22 +1,23 @@
-<script setup lang="ts">import { ref, watch } from 'vue';
+<script setup lang="ts">
+import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 const messages = {
 	en: {
 		home: 'Home',
-		projects: 'Projects',
+		projectsMenu: 'Projects',
 		resume: 'Resume',
 		toggleFR: 'Toggle to Fr',
 	},
 	fr: {
 		home: 'Accueil',
-		projects: 'Projets',
+		projectsMenu: 'Projet',
 		resume: 'CV',
 		toggleFR: 'Activer En',
 	}
 }
 
-const { t } = useI18n({ messages });
+const { t, locale } = useI18n({ messages, useScope: 'global' });
 
 const menuDivStyle = ref("fixed drop-shadow-lg bg-paper-white dark:bg-dark-gray py-10 inset-x-0 z-m1 -top-full");
 const overlayDisplay = ref("opacity-0 hidden");
@@ -59,7 +60,7 @@ const toggleMenu = (open?: boolean) => {
 				</li>
 				<li class="align-middle h-fit">
 					<RouterLink class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700"
-						to="/projects">{{ t("projects") }}
+						to="/projects">{{ t("projectsMenu") }}
 					</RouterLink>
 				</li>
 				<li class="align-middle h-fit">
@@ -70,7 +71,7 @@ const toggleMenu = (open?: boolean) => {
 				<li class="align-middle h-fit">
 					<a href="javascript:void(0)"
 						class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700"
-						@click="$i18n.locale = $i18n.locale === 'fr' ? 'en' : 'fr'">
+						@click="locale = locale === 'fr' ? 'en' : 'fr'">
 						{{ t("toggleFR") }}
 					</a>
 				</li>
@@ -105,7 +106,7 @@ const toggleMenu = (open?: boolean) => {
 				<li class="align-middle h-fit p-0">
 					<RouterLink
 						class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700"
-						to="/projects"><strong class="dark:text-white">{{ t("projects") }}</strong>
+						to="/projects"><strong class="dark:text-white">{{ t("projectsMenu") }}</strong>
 					</RouterLink>
 				</li>
 				<li class="align-middle h-fit p-0">
@@ -116,8 +117,10 @@ const toggleMenu = (open?: boolean) => {
 					</RouterLink>
 				</li>
 				<li class="align-middle h-fit p-0">
-					<a href="javascript:void(0)" @click="$i18n.locale = $i18n.locale === 'fr' ? 'en' : 'fr'"
-						class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700">
+					<a href="javascript:void(0)" @click="() => {
+						locale = locale === 'fr' ? 'en' : 'fr'
+						toggleMenu()
+					}" class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700">
 						<strong class="dark:text-white">{{ t("toggleFR") }}</strong>
 					</a>
 				</li>
