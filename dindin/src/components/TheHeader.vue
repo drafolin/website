@@ -1,42 +1,26 @@
 <script setup lang="ts">import { ref, watch } from 'vue';
-import { useLanguage } from '@/store/language';
+import { useI18n } from 'vue-i18n';
 
-let home = ref("Home");
-let projects = ref("Projects");
-let resume = ref("Resume");
-let toggleFR = ref("Switch to Fr");
+const messages = {
+	en: {
+		home: 'Home',
+		projects: 'Projects',
+		resume: 'Resume',
+		toggleFR: 'Toggle to Fr',
+	},
+	fr: {
+		home: 'Accueil',
+		projects: 'Projets',
+		resume: 'CV',
+		toggleFR: 'Activer En',
+	}
+}
 
-const lang = useLanguage();
+const { t } = useI18n({ messages });
 
 const menuDivStyle = ref("fixed drop-shadow-lg bg-paper-white dark:bg-dark-gray py-10 inset-x-0 z-m1 -top-full");
 const overlayDisplay = ref("opacity-0 hidden");
 var menuOpened = false;
-
-if (lang.lang === "fr") {
-	home.value = "Accueil";
-	projects.value = "Projets";
-	resume.value = "CV";
-	toggleFR.value = "Passer en En";
-} else {
-	home.value = "Home";
-	projects.value = "Projects";
-	resume.value = "Resume";
-	toggleFR.value = "Switch to Fr";
-}
-
-watch(() => lang.lang, async (lang) => {
-	if (lang === "fr") {
-		home.value = "Accueil";
-		projects.value = "Projets";
-		resume.value = "CV";
-		toggleFR.value = "Passer en En";
-	} else {
-		home.value = "Home";
-		projects.value = "Projects";
-		resume.value = "Resume";
-		toggleFR.value = "Switch to Fr";
-	}
-});
 
 const toggleMenu = (open?: boolean) => {
 	if (open === undefined ? !menuOpened : open) {
@@ -70,24 +54,24 @@ const toggleMenu = (open?: boolean) => {
 			<ul class="flex list-none h-fit">
 				<li class="align-middle h-fit">
 					<RouterLink class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700" to="/">
-						{{ home }}
+						{{ t("home") }}
 					</RouterLink>
 				</li>
 				<li class="align-middle h-fit">
 					<RouterLink class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700"
-						to="/projects">{{ projects }}
+						to="/projects">{{ t("projects") }}
 					</RouterLink>
 				</li>
 				<li class="align-middle h-fit">
 					<RouterLink class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700" to="/cv">
-						{{ resume }}
+						{{ t("resume") }}
 					</RouterLink>
 				</li>
 				<li class="align-middle h-fit">
 					<a href="javascript:void(0)"
 						class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700"
-						@click="lang.toggleLanguage()">
-						{{ toggleFR }}
+						@click="$i18n.locale = $i18n.locale === 'fr' ? 'en' : 'fr'">
+						{{ t("toggleFR") }}
 					</a>
 				</li>
 			</ul>
@@ -115,26 +99,26 @@ const toggleMenu = (open?: boolean) => {
 					<RouterLink
 						class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700"
 						to="/">
-						<strong class="dark:text-white">{{ home }}</strong>
+						<strong class="dark:text-white">{{ t("home") }}</strong>
 					</RouterLink>
 				</li>
 				<li class="align-middle h-fit p-0">
 					<RouterLink
 						class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700"
-						to="/projects"><strong class="dark:text-white">{{ projects }}</strong>
+						to="/projects"><strong class="dark:text-white">{{ t("projects") }}</strong>
 					</RouterLink>
 				</li>
 				<li class="align-middle h-fit p-0">
 					<RouterLink
 						class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700"
 						to="/cv">
-						<strong class="dark:text-white">{{ resume }}</strong>
+						<strong class="dark:text-white">{{ t("resume") }}</strong>
 					</RouterLink>
 				</li>
 				<li class="align-middle h-fit p-0">
-					<a href="javascript:void(0)" @click="lang.toggleLanguage()"
+					<a href="javascript:void(0)" @click="$i18n.locale = $i18n.locale === 'fr' ? 'en' : 'fr'"
 						class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700">
-						<strong class="dark:text-white">{{ toggleFR }}</strong>
+						<strong class="dark:text-white">{{ t("toggleFR") }}</strong>
 					</a>
 				</li>
 			</ul>

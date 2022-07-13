@@ -1,22 +1,27 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
-import { useLanguage } from '@/store/language';
+import { useI18n } from 'vue-i18n';
 
-const language = useLanguage();
-const findText = ref("Find me on:");
-
-watch(() => language.lang, async (lang) => {
-	if (lang === "fr") {
-		findText.value = "Trouvez-moi sur:";
-	} else {
-		findText.value = "Find me on:";
+const messages = {
+	en: {
+		footer: {
+			find: "Find me on",
+		}
+	},
+	fr: {
+		footer: {
+			find: "Trouve-moi sur",
+		}
 	}
-})
+}
+const i18n = useI18n({ messages });
+const { t } = i18n;
+
 </script>
 
 <template>
 	<footer class="flex flex-col pt-4 px-4 items-center">
-		<span>{{ findText }}</span>
+		<span>{{ t("footer.find") }}</span>
 		<nav class="max-w-xl w-full self-center">
 			<ul class="social flex justify-evenly list-none m-2 p-0 w-full">
 				<li class="inline m-2 github"><a href="https://github.com/dindin-nibnib">
