@@ -28,6 +28,7 @@ var menuOpened = false;
 
 watch(() => route.path, () => {
 	toggleMenu(false);
+	console.log("peen");
 })
 
 const toggleMenu = (open?: boolean) => {
