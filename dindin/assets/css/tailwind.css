@@ -17,27 +17,27 @@
 	}
 
 	h1 {
-		@apply text-4xl mt-5;
+		@apply mt-5 text-4xl;
 	}
 
 	h2 {
-		@apply text-3xl mt-4;
+		@apply mt-4 text-3xl;
 	}
 
 	h3 {
-		@apply text-2xl mt-3;
+		@apply mt-3 text-2xl;
 	}
 
 	h4 {
-		@apply text-xl mt-2;
+		@apply mt-2 text-xl;
 	}
 
 	h5 {
-		@apply text-lg mt-1;
+		@apply mt-1 text-lg;
 	}
 
 	:not(header) a {
-		@apply text-light-violet hover:text-white transition-all;
+		@apply transition-all text-light-violet hover:text-white;
 	}
 
 	p {
@@ -45,7 +45,7 @@
 	}
 
 	ul {
-		@apply list-disc ml-6;
+		@apply ml-6 list-disc;
 	}
 
 	li {
@@ -57,7 +57,7 @@
 	}
 
 	nav ul {
-		@apply list-none m-0;
+		@apply m-0 list-none;
 	}
 
 	nav li {
@@ -73,6 +73,6 @@
 	}
 
 	ol {
-		@apply list-decimal ml-6;
+		@apply ml-6 list-decimal;
 	}
 }
