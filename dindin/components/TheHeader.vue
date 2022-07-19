@@ -56,32 +56,32 @@ const toggleMenu = (open?: boolean) => {
 	</div>
 
 	<header
-		class="bg-paper-white dark:bg-dark-gray fixed shadow-lg dark:shadow-neutral-800 bg- w-full p-4 py-8 hidden lg:block">
-		<nav class="flex content-center items-center justify-between h-10">
-			<RouterLink to="/" class="flex items-center text-white">
-				<img src="../assets/dindin-lightweight.png" class="rounded-full h-10"
+		class="fixed hidden w-full p-4 py-8 shadow-lg bg-paper-white dark:bg-dark-gray dark:shadow-neutral-800 bg- lg:block">
+		<nav class="flex items-center content-center justify-between h-10">
+			<NuxtLink to="/" class="flex items-center text-white">
+				<img src="../assets/dindin-lightweight.png" class="h-10 rounded-full"
 					alt="Image of my sona, eyesopener." />
 				<span class="ml-4">dindin|nibnib</span>
-			</RouterLink>
+			</NuxtLink>
 			<ul class="flex list-none h-fit">
 				<li class="align-middle h-fit">
-					<RouterLink class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700" to="/">
+					<NuxtLink class="px-2 py-3 m-1 rounded-3xl bg-transparent-violet hover:bg-violet-700" to="/">
 						{{ t("home") }}
-					</RouterLink>
+					</NuxtLink>
 				</li>
 				<li class="align-middle h-fit">
-					<RouterLink class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700"
+					<NuxtLink class="px-2 py-3 m-1 rounded-3xl bg-transparent-violet hover:bg-violet-700"
 						to="/projects">{{ t("projectsMenu") }}
-					</RouterLink>
+					</NuxtLink>
 				</li>
 				<li class="align-middle h-fit">
-					<RouterLink class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700" to="/cv">
+					<NuxtLink class="px-2 py-3 m-1 rounded-3xl bg-transparent-violet hover:bg-violet-700" to="/cv">
 						{{ t("resume") }}
-					</RouterLink>
+					</NuxtLink>
 				</li>
 				<li class="align-middle h-fit">
 					<a href="javascript:void(0)"
-						class="py-3 m-1 px-2 rounded-3xl bg-transparent-violet hover:bg-violet-700"
+						class="px-2 py-3 m-1 rounded-3xl bg-transparent-violet hover:bg-violet-700"
 						@click="locale = locale === 'fr' ? 'en' : 'fr'">
 						{{ t("toggleFR") }}
 					</a>
@@ -91,47 +91,47 @@ const toggleMenu = (open?: boolean) => {
 	</header>
 
 	<header
-		class="bg-paper-white dark:bg-dark-gray fixed shadow-lg dark:shadow-neutral-800 w-full p-4 py-8 block lg:hidden">
-		<nav class="flex content-center items-center justify-between h-10 px-5">
-			<RouterLink to="/" class="flex items-center text-white">
-				<img src="../assets/dindin-lightweight.png" class="rounded-full h-10"
+		class="fixed block w-full p-4 py-8 shadow-lg bg-paper-white dark:bg-dark-gray dark:shadow-neutral-800 lg:hidden">
+		<nav class="flex items-center content-center justify-between h-10 px-5">
+			<NuxtLink to="/" class="flex items-center text-white">
+				<img src="../assets/dindin-lightweight.png" class="h-10 rounded-full"
 					alt="Image of my sona, eyesopener.">
-			</RouterLink>
+			</NuxtLink>
 
 			<a href="javascript:void(0)" @click="toggleMenu()" class="hamburger">
-				<span class="block rounded-full bg-neutral-700 dark:bg-white h-1 w-7 mb-2"></span>
-				<span class="block rounded-full bg-neutral-700 dark:bg-white h-1 w-7 mb-2"></span>
-				<span class="block rounded-full bg-neutral-700 dark:bg-white h-1 w-7"></span>
+				<span class="block h-1 mb-2 rounded-full bg-neutral-700 dark:bg-white w-7"></span>
+				<span class="block h-1 mb-2 rounded-full bg-neutral-700 dark:bg-white w-7"></span>
+				<span class="block h-1 rounded-full bg-neutral-700 dark:bg-white w-7"></span>
 			</a>
 		</nav>
 
 		<div :class="menuDivStyle">
-			<ul class="flex flex-col list-none mx-8">
-				<li class="align-middle h-fit p-0">
-					<RouterLink
-						class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700"
+			<ul class="flex flex-col mx-8 list-none">
+				<li class="p-0 align-middle h-fit">
+					<NuxtLink
+						class="flex flex-col items-center w-full py-3 my-1 rounded-3xl bg-transparent-violet hover:bg-violet-700"
 						to="/">
 						<strong class="dark:text-white">{{ t("home") }}</strong>
-					</RouterLink>
+					</NuxtLink>
 				</li>
-				<li class="align-middle h-fit p-0">
-					<RouterLink
-						class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700"
+				<li class="p-0 align-middle h-fit">
+					<NuxtLink
+						class="flex flex-col items-center w-full py-3 my-1 rounded-3xl bg-transparent-violet hover:bg-violet-700"
 						to="/projects"><strong class="dark:text-white">{{ t("projectsMenu") }}</strong>
-					</RouterLink>
+					</NuxtLink>
 				</li>
-				<li class="align-middle h-fit p-0">
-					<RouterLink
-						class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700"
+				<li class="p-0 align-middle h-fit">
+					<NuxtLink
+						class="flex flex-col items-center w-full py-3 my-1 rounded-3xl bg-transparent-violet hover:bg-violet-700"
 						to="/cv">
 						<strong class="dark:text-white">{{ t("resume") }}</strong>
-					</RouterLink>
+					</NuxtLink>
 				</li>
-				<li class="align-middle h-fit p-0">
+				<li class="p-0 align-middle h-fit">
 					<a href="javascript:void(0)" @click="() => {
 						locale = locale === 'fr' ? 'en' : 'fr'
 						toggleMenu()
-					}" class="flex flex-col items-center py-3 my-1 w-full rounded-3xl bg-transparent-violet hover:bg-violet-700">
+					}" class="flex flex-col items-center w-full py-3 my-1 rounded-3xl bg-transparent-violet hover:bg-violet-700">
 						<strong class="dark:text-white">{{ t("toggleFR") }}</strong>
 					</a>
 				</li>
