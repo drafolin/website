@@ -11,7 +11,7 @@ useHead({
   <div class="font-sans bg-fixed bg-center bg-cover bg-dragon-bg dark:text-white">
     <TheHeader />
     <div class="p-0 pt-24 bg-white/60 dark:bg-dark-transparent">
-      <NuxtChild />
+      <slot />
       <TheFooter />
     </div>
   </div>

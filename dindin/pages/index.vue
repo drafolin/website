@@ -98,10 +98,10 @@ const { t } = useI18n({ messages, useScope: 'global' });
 			<p v-html="t('projects.p1')"></p>
 			<p v-html="t('projects.p2')"></p>
 
-			<ul class="list-none m-0">
+			<ul class="m-0 list-none">
 				<li class="p-0">
 					<div
-						class="bg-red-attractifs/40 p-5 lg:overflow-auto lg:w-1/2 rounded-3xl m-5 flex flex-col items-center lg:block">
+						class="flex flex-col items-center p-5 m-5 bg-red-attractifs/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
 						<img class="rounded-2xl max-w-60 lg:float-right lg:ml-10 lg:max-w-60"
 							src="../assets/attractifs-preview.png" alt="Preview of the Attrac'tifs website'">
 						<h3><a href="https://github.com/dindin-nibnib/attractifs" class="text-white"
@@ -112,7 +112,7 @@ const { t } = useI18n({ messages, useScope: 'global' });
 				</li>
 				<li class="p-0">
 					<div
-						class="bg-discord-blurple/40 p-5 lg:overflow-auto lg:w-1/2 rounded-3xl m-5 flex flex-col items-center lg:block">
+						class="flex flex-col items-center p-5 m-5 bg-discord-blurple/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
 						<img class="rounded-2xl max-w-60 lg:float-right lg:ml-10 lg:max-w-60"
 							src="../assets/r-wof-bot-screenshot.png" alt="Preview of the discord bot">
 						<h3><a href="https://github.com/r-wingsoffire/r-wof-bot" class="text-white"
@@ -122,7 +122,7 @@ const { t } = useI18n({ messages, useScope: 'global' });
 				</li>
 				<li class="p-0">
 					<div
-						class="bg-blue-700/40 p-5 lg:overflow-auto lg:w-1/2 rounded-3xl m-5 flex flex-col items-center lg:block">
+						class="flex flex-col items-center p-5 m-5 bg-blue-700/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
 						<img src="https://cdn.discordapp.com/icons/981917730737360916/2e4e3dccaae4527b96836b7848152253.webp?size=240"
 							class="rounded-2xl max-w-60 lg:float-right lg:ml-10 lg:max-h-60" alt="Icon of cobbalt">
 						<h3><a href="https://github.com/devs-of-cobbalt/cobbalt" class="text-white"
