@@ -50,6 +50,8 @@ const { t } = i18n;
 					</a></li>
 			</ul>
 		</nav>
+		<span class="dark:text-gray-400 text-xs lg:text-sm self-center mt-4">This site is a work in progress! Some pages
+			might not be existing for now...</span><br />
 		<span class="dark:text-gray-400 text-xs lg:text-sm self-center mt-4">
 			©2021-2022 - Odin Beuchat | <a href="mailto:odinbeuchat.ob@icloud.com">odinbeuchat.ob@icloud.com</a>
 		</span>
