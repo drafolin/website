@@ -2,7 +2,6 @@
 import { ref } from 'vue';
 import { RouterLink, RouterView } from 'vue-router'
 console.log("discord.vue");
-let animation = ref("");
 
 useHead({
 	title: "Presentation discord",
@@ -10,138 +9,108 @@ useHead({
 		{ rel: "icon", href: "/discord.ico" }
 	]
 })
-
-animation.value = 'disappear'
-
 </script>
 
 <template>
-	<div class="loading-screen" :style="{ 'animation-name': animation }">
-		<img alt="Chargement" class="loading-icon" src="/assets/discord/images/discord_icon_mono.png">
-		<div class="loading-anim-wrapper">
-			<div class="loading-anim">
-				<div class="gradient"></div>
-				<div class="gradient"></div>
+	<div class="content bg-dark-gray">
+		<!--div-- class="loading-screen" :style="loadingStyle">
+			<img alt="Chargement" class="loading-icon" src="/assets/discord/images/discord_icon_mono.png">
+			<div class="loading-anim-wrapper">
+				<div class="loading-anim">
+					<div class="gradient"></div>
+					<div class="gradient"></div>
+				</div>
 			</div>
-		</div>
-	</div>
-	<header class="mobile">
-		<input id="menu-open" type="checkbox">
-		<label class="menu-open" for="menu-open">
-			<span></span>
-			<span></span>
-			<span></span>
-		</label>
-		<RouterLink class="main-title" to="/">
-			<h1 class="main-title">Discord</h1>
-		</RouterLink>
-		<img alt="icône discord" class="header-icon" src="/assets/discord/images/discord_icon.png">
-
-		<div class="menu-content">
-			<RouterLink class="choix-menu" to="/">
-				<div class="choix-menu actif">
-					Accueil
-				</div>
+		</div-->
+		<header class="mobile">
+			<input id="menu-open" type="checkbox">
+			<label class="menu-open" for="menu-open">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+			<RouterLink class="main-title" to="/">
+				<h1 class="main-title">Discord</h1>
 			</RouterLink>
-			<RouterLink class="choix-menu" to="/interface">
-				<div class="choix-menu">
-					Interface
-				</div>
-			</RouterLink>>
-			<RouterLink class="choix-menu" to="/fonctionnalites">
-				<div class="choix-menu">
-					Fonctionnalités
-				</div>
-			</RouterLink>
-			<RouterLink class="choix-menu" to="/bots">
-				<div class="choix-menu">
-					Bots
-				</div>
-			</RouterLink>
-			<RouterLink class="choix-menu" to="/statistiques">
-				<div class="choix-menu">
-					Statistiques
-				</div>
-			</RouterLink>
-		</div>
-	</header>
-	<header class="desktop">
-		<RouterLink class="main-title" to="/">
 			<img alt="icône discord" class="header-icon" src="/assets/discord/images/discord_icon.png">
-			<h1 class="main-title">Discord</h1>
-		</RouterLink>
-
-		<div class="links">
-			<RouterLink to="/interface">Interface</RouterLink>
-			<RouterLink to="/fonctionnalites">Fonctionnalités</RouterLink>
-			<RouterLink to="/bots">Bots</RouterLink>
-			<RouterLink to="/statistiques">Statistiques</RouterLink>
-		</div>
-	</header>
-
-	<main>
-		<slot />
-	</main>
-
-	<footer>
-		<img alt="icône discord" class="footer-image" src="/assets/discord/images/discord_icon.png">
-
-		<div class="middle">
-			<div class="copyright">
-				©2021 - <a href="../..">Odin Beuchat</a> | <a href="mailto:odinbeuchat.ob@icloud.com"
-					target="_blank">odinbeuchat.ob@icloud.com</a>
+			<div class="menu-content">
+				<RouterLink class="choix-menu" to="/">
+					<div class="choix-menu actif">
+						Accueil
+					</div>
+				</RouterLink>
+				<RouterLink class="choix-menu" to="/interface">
+					<div class="choix-menu">
+						Interface
+					</div>
+				</RouterLink>>
+				<RouterLink class="choix-menu" to="/fonctionnalites">
+					<div class="choix-menu">
+						Fonctionnalités
+					</div>
+				</RouterLink>
+				<RouterLink class="choix-menu" to="/bots">
+					<div class="choix-menu">
+						Bots
+					</div>
+				</RouterLink>
+				<RouterLink class="choix-menu" to="/statistiques">
+					<div class="choix-menu">
+						Statistiques
+					</div>
+				</RouterLink>
 			</div>
-
-			<div class="networks">
-				<a href="https://www.facebook.com/discord/" target="_blank">
-					<img alt="page facebook" class="network-icon" src="/assets/discord/images/facebook.png">
-				</a>
-
-				<a href="https://www.instagram.com/discord/" target="_blank">
-					<img alt="Compte instagram" class="network-icon" src="/assets/discord/images/insta.png">
-				</a>
-
-				<a href="https://www.youtube.com/discord/" target="_blank">
-					<img alt="Chaîne youtube" class="network-icon" src="/assets/discord/images/yt.png">
-				</a>
-
-				<a href="https://twitter.com/discord" target="_blank">
-					<img alt="Compte twitter" class="network-icon" src="/assets/discord/images/twitter.png">
-				</a>
+		</header>
+		<header class="desktop">
+			<RouterLink class="main-title" to="/">
+				<img alt="icône discord" class="header-icon" src="/assets/discord/images/discord_icon.png">
+				<h1 class="main-title">Discord</h1>
+			</RouterLink>
+			<div class="links">
+				<RouterLink to="/interface">Interface</RouterLink>
+				<RouterLink to="/fonctionnalites">Fonctionnalités</RouterLink>
+				<RouterLink to="/bots">Bots</RouterLink>
+				<RouterLink to="/statistiques">Statistiques</RouterLink>
 			</div>
-		</div>
-
-		<a href="https://www.discord.com" target="_blank">
-			<div class="lien-off">Site officiel</div>
-		</a>
-	</footer>
+		</header>
+		<main>
+			<slot />
+		</main>
+		<footer>
+			<img alt="icône discord" class="footer-image" src="/assets/discord/images/discord_icon.png">
+			<div class="middle">
+				<div class="copyright">
+					©2021 - <a href="../..">Odin Beuchat</a> | <a href="mailto:odinbeuchat.ob@icloud.com"
+						target="_blank">odinbeuchat.ob@icloud.com</a>
+				</div>
+				<div class="networks">
+					<a href="https://www.facebook.com/discord/" target="_blank">
+						<img alt="page facebook" class="network-icon" src="/assets/discord/images/facebook.png">
+					</a>
+					<a href="https://www.instagram.com/discord/" target="_blank">
+						<img alt="Compte instagram" class="network-icon" src="/assets/discord/images/insta.png">
+					</a>
+					<a href="https://www.youtube.com/discord/" target="_blank">
+						<img alt="Chaîne youtube" class="network-icon" src="/assets/discord/images/yt.png">
+					</a>
+					<a href="https://twitter.com/discord" target="_blank">
+						<img alt="Compte twitter" class="network-icon" src="/assets/discord/images/twitter.png">
+					</a>
+				</div>
+			</div>
+			<a href="https://www.discord.com" target="_blank">
+				<div class="lien-off">Site officiel</div>
+			</a>
+		</footer>
+	</div>
 </template>
 
-<style>
+<style scoped>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url("https://necolas.github.io/normalize.css/latest/normalize.css");
-
-@font-face {
-	font-family: "Whitney";
-	src: local(Whitney),
-		url("/assets/discord/fonts/whitneymedium.woff") format("woff2");
-}
-
-@font-face {
-	font-family: "Ginto";
-	src: local(Ginto),
-		url("/assets/discord/fonts/ginto.woff2") format("woff2");
-}
-
-@font-face {
-	font-family: "Ginto Nord";
-	src: local("Ginto Nord"),
-		url("/assets/discord/fonts/Ginto Nord.woff2") format("woff2");
-}
-
-@font-face {
-	font-family: "Open Sans";
-	src: url("https://fonts.gstatic.com/s/opensans/v27/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjr0B4gaVI.woff2") format("woff2");
-}
 
 @keyframes slide {
 	from {
@@ -176,13 +145,9 @@ animation.value = 'disappear'
 }
 
 * {
-	--dark-grey: #23272a;
-	--light-grey: #2e3438;
-	--blurple: #828cf6;
 	--font-boldest: "Ginto Nord", Whitney, Arial, sans-serif;
 	--default-shadow: 0 2px 4px black;
 	color: white;
-	background-color: var(--dark-grey);
 	font-family: Whitney, "Open Sans", Arial, sans-serif;
 	font-size: 18px;
 	line-height: 1.3em;
@@ -234,7 +199,7 @@ h6 {
 h1 {
 	text-align: center;
 	align-self: center;
-	font-family: var(--font-boldest);
+	@apply font-boldest;
 	font-weight: bolder;
 	font-size: min(7vw, 48px);
 }
@@ -285,6 +250,10 @@ li {
 
 .wumpus {
 	background-color: var(--light-grey);
+	max-width: 180px;
+	align-self: center;
+	margin-bottom: 15px;
+	margin-top: -17.6px;
 }
 
 .center {
@@ -466,13 +435,6 @@ main {
 	margin: auto;
 }
 
-.wumpus {
-	max-width: 180px;
-	align-self: center;
-	margin-bottom: 15px;
-	margin-top: -17.6px;
-}
-
 .emphasis {
 	margin: 50px auto 20px auto;
 	background-color: var(--blurple);
@@ -644,10 +606,9 @@ div.status {
 	top: 0;
 	left: 0;
 	z-index: 999;
-	animation-duration: 500ms;
-	animation-fill-mode: forwards;
 	background-color: var(--dark-grey);
 	opacity: 1;
+	transition: all 300ms ease-in-out
 }
 
 .gradient {

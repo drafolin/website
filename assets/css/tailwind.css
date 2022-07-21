@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: "Whitney";
+	src: local(Whitney),
+		url("/assets/discord/fonts/whitneymedium.woff") format("woff2");
+}
+
+@font-face {
+	font-family: "Ginto";
+	src: local(Ginto),
+		url("/assets/discord/fonts/ginto.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Ginto Nord";
+	src: local("Ginto Nord"),
+		url("/assets/discord/fonts/Ginto Nord.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Open Sans";
+	src: url("https://fonts.gstatic.com/s/opensans/v27/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjr0B4gaVI.woff2") format("woff2");
+}
+
+@layer base {
+	* {
+		@apply box-border;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-bold;
+	}
+
+	h1 {
+		@apply mt-5 text-4xl;
+	}
+
+	h2 {
+		@apply mt-4 text-3xl;
+	}
+
+	h3 {
+		@apply mt-3 text-2xl;
+	}
+
+	h4 {
+		@apply mt-2 text-xl;
+	}
+
+	h5 {
+		@apply mt-1 text-lg;
+	}
+
+	:not(header) a {
+		@apply text-white transition-all text-light-violet hover: ;
+	}
+
+	p {
+		@apply my-2;
+	}
+
+	ul {
+		@apply ml-6 list-disc;
+	}
+
+	li {
+		@apply pl-3;
+	}
+
+	li>ul {
+		@apply list-circle;
+	}
+
+	nav ul {
+		@apply m-0 list-none;
+	}
+
+	nav li {
+		@apply m-0;
+	}
+
+	main {
+		@apply flex flex-col;
+	}
+
+	body {
+		@apply dark: bg-dark-transparent;
+	}
+
+	ol {
+		@apply ml-6 list-decimal;
+	}
+}
