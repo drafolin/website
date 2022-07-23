@@ -25,13 +25,13 @@ definePageMeta({
 		<li>Discord++ (C++)</li>
 		<li>Javacord (Java)</li>
 	</ul>
-	<img alt="Exemple de commande" src="../assets/images/command.png">
-	<img alt="Réponse du bot" src="../assets/images/response.png">
+	<img alt="Exemple de commande" src="../../assets/discord/images/command.png">
+	<img alt="Réponse du bot" src="../../assets/discord/images/response.png">
 	<div class="light">
 		<p>
 			Exemple de bot (Fait par moi-même, avec discord.js)
 		</p>
-		<img alt="Partie du code du bot" src="../assets/images/code.png">
+		<img alt="Partie du code du bot" src="../../assets/discord/images/code.png">
 	</div>
 	<p class="small">
 		Les listes présentes sur ce site ne sont pas exhaustives.
