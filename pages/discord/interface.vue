@@ -1,5 +1,7 @@
-<script setup lang="ts">
-import { RouterLink } from 'vue-router'
+<script setup lang='ts'>
+definePageMeta({
+	layout: "discord"
+})
 </script>
 
 <template>
@@ -76,7 +78,7 @@ import { RouterLink } from 'vue-router'
 	<div class="nitro">
 		<h4>Nitro</h4>
 		<p>
-			Affiche un menu permettant d’acheter <RouterLink to="/fonctionnalites#nitro">Discord Nitro</RouterLink>,
+			Affiche un menu permettant d’acheter <NuxtLink to="/fonctionnalites#nitro">Discord Nitro</NuxtLink>,
 			un
 			abonnement
 			qui

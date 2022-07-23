@@ -1,3 +1,9 @@
+<script setup lang='ts'>
+definePageMeta({
+	layout: "discord"
+})
+</script>
+
 <template>
 	<h1>Bots</h1>
 	<p>

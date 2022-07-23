@@ -80,11 +80,10 @@ const toggleMenu = (open?: boolean) => {
 					</NuxtLink>
 				</li>
 				<li class="align-middle h-fit">
-					<a href="javascript:void(0)"
-						class="px-2 py-3 m-1 rounded-3xl bg-transparent-violet hover:bg-violet-700"
+					<button class="px-2 py-3 m-1 rounded-3xl bg-transparent-violet hover:bg-violet-700"
 						@click="locale = locale === 'fr' ? 'en' : 'fr'">
 						{{ t("toggleFR") }}
-					</a>
+					</button>
 				</li>
 			</ul>
 		</nav>
@@ -98,11 +97,11 @@ const toggleMenu = (open?: boolean) => {
 					alt="Image of my sona, eyesopener.">
 			</NuxtLink>
 
-			<a href="javascript:void(0)" @click="toggleMenu()" class="hamburger">
+			<button @click="toggleMenu()" class="hamburger">
 				<span class="block h-1 mb-2 rounded-full bg-neutral-700 dark:bg-white w-7"></span>
 				<span class="block h-1 mb-2 rounded-full bg-neutral-700 dark:bg-white w-7"></span>
 				<span class="block h-1 rounded-full bg-neutral-700 dark:bg-white w-7"></span>
-			</a>
+			</button>
 		</nav>
 
 		<div :class="menuDivStyle">
@@ -128,12 +127,12 @@ const toggleMenu = (open?: boolean) => {
 					</NuxtLink>
 				</li>
 				<li class="p-0 align-middle h-fit">
-					<a href="javascript:void(0)" @click="() => {
+					<button @click="() => {
 						locale = locale === 'fr' ? 'en' : 'fr'
 						toggleMenu()
 					}" class="flex flex-col items-center w-full py-3 my-1 rounded-3xl bg-transparent-violet hover:bg-violet-700">
 						<strong class="dark:text-white">{{ t("toggleFR") }}</strong>
-					</a>
+					</button>
 				</li>
 			</ul>
 		</div>

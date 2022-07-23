@@ -11,6 +11,8 @@ module.exports = {
         "red-attractifs": "#fd3356",
         "discord-blurple": "#5865F2",
         "paper-white": "#dad8d7",
+        "light-gray": "#2e3438",
+        "blurple": "#828cf6",
       },
       spacing: {
         "header-height": "104px",
@@ -29,7 +31,8 @@ module.exports = {
         "dragon-bg": "url(https://i.imgur.com/4oFKBnF.jpeg)",
       },
       fontFamily: {
-        sans: ["Whitney", "Bahnschrift", "Helvetica", "sans-serif"]
+        sans: ["Whitney", "Bahnschrift", "Helvetica", "sans-serif"],
+        boldest: ["Ginto Nord", "Whitney", "Arial", "sans-serif"]
       },
       animation: {
         "menu-open-anim": "menu-open 0.5s ease-in-out forwards",

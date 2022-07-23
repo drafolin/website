@@ -1,6 +1,12 @@
+<script setup lang='ts'>
+definePageMeta({
+	layout: "discord"
+})
+</script>
+
 <template>
 	<h1>Introduction</h1>
-	<img alt="La mascotte, Wumpus" class="wumpus" src="../assets/images/Wumpus.gif">
+	<img alt="La mascotte, Wumpus" class="wumpus" src="../../assets/discord/images/Wumpus.gif">
 	<p>
 		Discord est une plateforme de messagerie instantanée,
 		qui a une interface intuitive, facile à utiliser, et très efficace.
