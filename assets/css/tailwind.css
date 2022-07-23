@@ -60,7 +60,7 @@
 	}
 
 	:not(header) a {
-		@apply text-white transition-all text-light-violet hover: ;
+		@apply text-white transition-all hover:text-light-violet;
 	}
 
 	p {
@@ -92,7 +92,7 @@
 	}
 
 	body {
-		@apply dark: bg-dark-transparent;
+		@apply dark:bg-dark-transparent;
 	}
 
 	ol {
