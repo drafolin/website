@@ -17,7 +17,7 @@ definePageMeta({
 	<div class="light">
 		<h2>Disposition</h2>
 		<p>L'interface de discord est très simple à comprendre :</p>
-		<img alt="Schéma de disposition de l'interface" src="../assets/images/disposition-interface.png">
+		<img alt="Schéma de disposition de l'interface" src="../assets/discord/images/disposition-interface.png">
 
 	</div>
 	<h3>Liste de serveurs</h3>
@@ -95,7 +95,7 @@ definePageMeta({
 			ligne,
 			etc…
 		</p>
-		<img alt="Schéma de la zone de contenu" src="../assets/images/contenu.png">
+		<img alt="Schéma de la zone de contenu" src="../assets/discord/images/contenu.png">
 	</div>
 
 	<h3>Liste d'amis ou de membres</h3>
