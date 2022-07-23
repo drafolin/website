@@ -106,11 +106,11 @@ useHead({
 </template>
 
 <style scoped>
+@import url("https://necolas.github.io/normalize.css/latest/normalize.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://necolas.github.io/normalize.css/latest/normalize.css");
 
 @keyframes slide {
 	from {
