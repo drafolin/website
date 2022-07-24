@@ -63,24 +63,30 @@ const toggleMenu = (open?: boolean) => {
 					alt="Image of my sona, eyesopener." />
 				<span class="ml-4">dindin|nibnib</span>
 			</NuxtLink>
-			<ul class="flex list-none h-fit">
+			<ul class="flex items-center list-none h-fit">
 				<li class="align-middle h-fit">
-					<NuxtLink class="px-2 py-3 m-1 rounded-3xl bg-transparent-violet hover:bg-violet-700" to="/">
+					<NuxtLink
+						class="px-2 py-3 m-1 rounded-3xl bg-transparent-violet hover:bg-violet-700/80 hover:text-white"
+						to="/">
 						{{ t("home") }}
 					</NuxtLink>
 				</li>
 				<li class="align-middle h-fit">
-					<NuxtLink class="px-2 py-3 m-1 rounded-3xl bg-transparent-violet hover:bg-violet-700"
+					<NuxtLink
+						class="px-2 py-3 m-1 rounded-3xl bg-transparent-violet hover:bg-violet-700/80 hover:text-white"
 						to="/projects">{{ t("projectsMenu") }}
 					</NuxtLink>
 				</li>
 				<li class="align-middle h-fit">
-					<NuxtLink class="px-2 py-3 m-1 rounded-3xl bg-transparent-violet hover:bg-violet-700" to="/cv">
+					<NuxtLink
+						class="px-2 py-3 m-1 rounded-3xl bg-transparent-violet hover:bg-violet-700/80 hover:text-white"
+						to="/cv">
 						{{ t("resume") }}
 					</NuxtLink>
 				</li>
 				<li class="align-middle h-fit">
-					<button class="px-2 py-3 m-1 rounded-3xl bg-transparent-violet hover:bg-violet-700"
+					<button
+						class="px-2 py-3 m-1 rounded-3xl bg-transparent-violet hover:bg-violet-700/80 hover:text-white"
 						@click="locale = locale === 'fr' ? 'en' : 'fr'">
 						{{ t("toggleFR") }}
 					</button>
@@ -105,7 +111,7 @@ const toggleMenu = (open?: boolean) => {
 		</nav>
 
 		<div :class="menuDivStyle">
-			<ul class="flex flex-col mx-8 list-none">
+			<ul class="flex flex-col items-center list-none">
 				<li class="p-0 align-middle h-fit">
 					<NuxtLink
 						class="flex flex-col items-center w-full py-3 my-1 rounded-3xl bg-transparent-violet hover:bg-violet-700"

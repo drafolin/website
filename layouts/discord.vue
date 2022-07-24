@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { RouterLink, RouterView } from 'vue-router'
 console.log("discord.vue");
 
 useHead({
@@ -29,48 +28,48 @@ useHead({
 				<span></span>
 				<span></span>
 			</label>
-			<RouterLink class="main-title" to="/">
+			<NuxtLink class="main-title" to="/discord">
 				<h1 class="main-title">Discord</h1>
-			</RouterLink>
+			</NuxtLink>
 			<img alt="icône discord" class="header-icon" src="/assets/discord/images/discord_icon.png">
 			<div class="menu-content">
-				<RouterLink class="choix-menu" to="/">
+				<NuxtLink class="choix-menu" to="/discord">
 					<div class="choix-menu actif">
 						Accueil
 					</div>
-				</RouterLink>
-				<RouterLink class="choix-menu" to="/interface">
+				</NuxtLink>
+				<NuxtLink class="choix-menu" to="/discord/interface">
 					<div class="choix-menu">
 						Interface
 					</div>
-				</RouterLink>>
-				<RouterLink class="choix-menu" to="/fonctionnalites">
+				</NuxtLink>>
+				<NuxtLink class="choix-menu" to="/discord/fonctionnalites">
 					<div class="choix-menu">
 						Fonctionnalités
 					</div>
-				</RouterLink>
-				<RouterLink class="choix-menu" to="/bots">
+				</NuxtLink>
+				<NuxtLink class="choix-menu" to="/discord/bots">
 					<div class="choix-menu">
 						Bots
 					</div>
-				</RouterLink>
-				<RouterLink class="choix-menu" to="/statistiques">
+				</NuxtLink>
+				<NuxtLink class="choix-menu" to="/discord/stats">
 					<div class="choix-menu">
 						Statistiques
 					</div>
-				</RouterLink>
+				</NuxtLink>
 			</div>
 		</header>
 		<header class="desktop">
-			<RouterLink class="main-title" to="/">
+			<NuxtLink class="main-title" to="/discord">
 				<img alt="icône discord" class="header-icon" src="/assets/discord/images/discord_icon.png">
 				<h1 class="main-title">Discord</h1>
-			</RouterLink>
+			</NuxtLink>
 			<div class="links">
-				<RouterLink to="/interface">Interface</RouterLink>
-				<RouterLink to="/fonctionnalites">Fonctionnalités</RouterLink>
-				<RouterLink to="/bots">Bots</RouterLink>
-				<RouterLink to="/statistiques">Statistiques</RouterLink>
+				<NuxtLink to="/discord/interface">Interface</NuxtLink>
+				<NuxtLink to="/discord/fonctionnalites">Fonctionnalités</NuxtLink>
+				<NuxtLink to="/discord/bots">Bots</NuxtLink>
+				<NuxtLink to="/discord/stats">Statistiques</NuxtLink>
 			</div>
 		</header>
 		<main>
@@ -80,7 +79,7 @@ useHead({
 			<img alt="icône discord" class="footer-image" src="/assets/discord/images/discord_icon.png">
 			<div class="middle">
 				<div class="copyright">
-					©2021 - <a href="../..">Odin Beuchat</a> | <a href="mailto:odinbeuchat.ob@icloud.com"
+					©2021 - <NuxtLink to="/">Odin Beuchat</NuxtLink> | <a href="mailto:odinbeuchat.ob@icloud.com"
 						target="_blank">odinbeuchat.ob@icloud.com</a>
 				</div>
 				<div class="networks">
@@ -411,7 +410,7 @@ div.choix-menu {
 	height: fit-content;
 }
 
-RouterLink.choix-menu {
+NuxtLink.choix-menu {
 	width: 100%;
 	height: fit-content;
 	display: block;
