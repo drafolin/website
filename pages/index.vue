@@ -36,7 +36,7 @@ const messages = {
 				p: "I am building a discord bot for the r/WingsOfFire subreddit."
 			},
 			pr3: {
-				title: "Cobbalt",
+				title: "Cobalt",
 				p: "I am working on a mod creator helper for minecraft. It will be usable for both advanced and\
 							begginner mod creators, featuring a compiler allowing cross-version mod creation without\
 							changing the base code."
@@ -74,7 +74,7 @@ const messages = {
 								href=\"https://www.reddit.com/r/wingsoffire\">r/WingsOfFire</a>"
 			},
 			pr3: {
-				title: "Cobbalt",
+				title: "Cobalt",
 				p: "Je travaille sur une aide à la création de mods pour Minecraft. Il sera utilisable à la fois\
 							pour les créateurs de mods avancés et débutants, avec un compilateur permettant la création\
 							de mods de différentes versions\

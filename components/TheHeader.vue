@@ -65,28 +65,24 @@ const toggleMenu = (open?: boolean) => {
 			</NuxtLink>
 			<ul class="flex items-center list-none h-fit">
 				<li class="align-middle h-fit">
-					<NuxtLink
-						class="px-2 py-3 m-1 rounded-3xl bg-transparent-violet hover:bg-violet-700/80 hover:text-white"
+					<NuxtLink class="px-3 py-3 m-1 rounded-3xl bg-violet-700/20 hover:bg-violet-700/80 hover:text-white"
 						to="/">
 						{{ t("home") }}
 					</NuxtLink>
 				</li>
 				<li class="align-middle h-fit">
-					<NuxtLink
-						class="px-2 py-3 m-1 rounded-3xl bg-transparent-violet hover:bg-violet-700/80 hover:text-white"
+					<NuxtLink class="px-3 py-3 m-1 rounded-3xl bg-violet-700/20 hover:bg-violet-700/80 hover:text-white"
 						to="/projects">{{ t("projectsMenu") }}
 					</NuxtLink>
 				</li>
 				<li class="align-middle h-fit">
-					<NuxtLink
-						class="px-2 py-3 m-1 rounded-3xl bg-transparent-violet hover:bg-violet-700/80 hover:text-white"
+					<NuxtLink class="px-3 py-3 m-1 rounded-3xl bg-violet-700/20 hover:bg-violet-700/80 hover:text-white"
 						to="/cv">
 						{{ t("resume") }}
 					</NuxtLink>
 				</li>
 				<li class="align-middle h-fit">
-					<button
-						class="px-2 py-3 m-1 rounded-3xl bg-transparent-violet hover:bg-violet-700/80 hover:text-white"
+					<button class="px-3 py-3 m-1 rounded-3xl bg-violet-700/20 hover:bg-violet-700/80 hover:text-white"
 						@click="locale = locale === 'fr' ? 'en' : 'fr'">
 						{{ t("toggleFR") }}
 					</button>
@@ -111,32 +107,32 @@ const toggleMenu = (open?: boolean) => {
 		</nav>
 
 		<div :class="menuDivStyle">
-			<ul class="flex flex-col items-center list-none">
-				<li class="p-0 align-middle h-fit">
+			<ul class="flex flex-col items-center mx-6 list-none">
+				<li class="w-full p-0 align-middle h-fit">
 					<NuxtLink
-						class="flex flex-col items-center w-full py-3 my-1 rounded-3xl bg-transparent-violet hover:bg-violet-700"
+						class="flex flex-col items-center w-full py-3 my-1 rounded-3xl bg-violet-700/20 hover:bg-violet-700"
 						to="/">
 						<strong class="dark:text-white">{{ t("home") }}</strong>
 					</NuxtLink>
 				</li>
-				<li class="p-0 align-middle h-fit">
+				<li class="w-full p-0 align-middle h-fit">
 					<NuxtLink
-						class="flex flex-col items-center w-full py-3 my-1 rounded-3xl bg-transparent-violet hover:bg-violet-700"
+						class="flex flex-col items-center w-full py-3 my-1 rounded-3xl bg-violet-700/20 hover:bg-violet-700"
 						to="/projects"><strong class="dark:text-white">{{ t("projectsMenu") }}</strong>
 					</NuxtLink>
 				</li>
-				<li class="p-0 align-middle h-fit">
+				<li class="w-full p-0 align-middle h-fit">
 					<NuxtLink
-						class="flex flex-col items-center w-full py-3 my-1 rounded-3xl bg-transparent-violet hover:bg-violet-700"
+						class="flex flex-col items-center w-full py-3 my-1 rounded-3xl bg-violet-700/20 hover:bg-violet-700"
 						to="/cv">
 						<strong class="dark:text-white">{{ t("resume") }}</strong>
 					</NuxtLink>
 				</li>
-				<li class="p-0 align-middle h-fit">
+				<li class="w-full p-0 align-middle h-fit">
 					<button @click="() => {
 						locale = locale === 'fr' ? 'en' : 'fr'
 						toggleMenu()
-					}" class="flex flex-col items-center w-full py-3 my-1 rounded-3xl bg-transparent-violet hover:bg-violet-700">
+					}" class="flex flex-col items-center w-full py-3 my-1 rounded-3xl bg-violet-700/20 hover:bg-violet-700">
 						<strong class="dark:text-white">{{ t("toggleFR") }}</strong>
 					</button>
 				</li>
