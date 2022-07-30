@@ -12,6 +12,7 @@ export default defineNuxtConfig({
 		},
 	},
 	image: {
+		provider: 'vercel',
 		domains: ['cdn.discordapp.com']
 	},
 	target: "static"
