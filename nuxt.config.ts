@@ -13,5 +13,6 @@ export default defineNuxtConfig({
 	},
 	image: {
 		domains: ['cdn.discordapp.com']
-	}
+	},
+	target: "static"
 });
