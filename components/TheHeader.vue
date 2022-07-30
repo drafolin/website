@@ -61,7 +61,7 @@ const toggleMenu = (open?: boolean) => {
 		class="fixed hidden w-full p-4 py-8 shadow-lg bg-paper-white dark:bg-dark-gray dark:shadow-neutral-800 bg- lg:block">
 		<nav class="flex items-center content-center justify-between h-10">
 			<NuxtLink to="/" class="flex items-center text-white">
-				<img src="../assets/dindin-lightweight.png" class="h-10 rounded-full"
+				<nuxt-img format="avif" src="/assets/dindin-lightweight.png" class="h-10 rounded-full"
 					alt="Image of my sona, eyesopener." />
 				<span class="ml-4">dindin|nibnib</span>
 			</NuxtLink>
@@ -97,8 +97,8 @@ const toggleMenu = (open?: boolean) => {
 		class="fixed block w-full p-4 py-8 shadow-lg bg-paper-white dark:bg-dark-gray dark:shadow-neutral-800 lg:hidden">
 		<nav class="flex items-center content-center justify-between h-10 px-5">
 			<NuxtLink to="/" class="flex items-center text-white">
-				<img src="../assets/dindin-lightweight.png" class="h-10 rounded-full"
-					alt="Image of my sona, eyesopener.">
+				<nuxt-img format="avif" src="/assets/dindin-lightweight.png" class="h-10 rounded-full"
+					alt="Image of my sona, eyesopener."/>
 			</NuxtLink>
 
 			<button :aria-label="t('menuButton')" @click="toggleMenu()" class="hamburger">

@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "Whitney";
-  src: local(Whitney);
+  src: local(Whitney),
     url("/assets/fonts/whitneymedium.woff") format("woff2");
 }
 

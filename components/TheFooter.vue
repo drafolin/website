@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 const messages = {
@@ -25,28 +24,28 @@ const { t } = i18n;
 		<nav class="max-w-xl w-full self-center">
 			<ul class="social flex justify-evenly list-none m-2 p-0 w-full">
 				<li class="inline m-2 github"><a href="https://github.com/dindin-nibnib">
-						<img src="../assets/icons/github-icon.png"
+						<nuxt-img format="avif" src="/assets/icons/github-icon.png"
 							class="max-w-xs max-h-xs w-full grayscale hover:grayscale-0 transition-all"
-							alt="My github page">
+							alt="My github page"/>
 					</a></li>
 				<li class="inline m-2 twitter"><a href="https://twitter.com/dindin_nibnib">
-						<img src="../assets/icons/twitter-icon.png"
+						<nuxt-img format="avif" src="/assets/icons/twitter-icon.png"
 							class="max-w-xs max-h-xs w-full grayscale hover:grayscale-0 transition-all"
-							alt="My twitter page">
+							alt="My twitter page"/>
 					</a></li>
 				<li class="inline m-2 telegram"><a href="https://t.me/dindin_nibnib">
-						<img src="../assets/icons/telegram-icon.png"
+						<nuxt-img format="avif" src="/assets/icons/telegram-icon.png"
 							class="max-w-xs max-h-xs w-full grayscale hover:grayscale-0 transition-all"
-							alt="My telegram account">
+							alt="My telegram account"/>
 					</a></li>
 				<li class="inline m-2 discord"><a href="https://discordapp.com/users/373515998000840714">
-						<img src="../assets/icons/discord-icon.png"
+						<nuxt-img format="avif" src="/assets/icons/discord-icon.png"
 							class="max-w-xs max-h-xs w-full grayscale hover:grayscale-0 transition-all"
-							alt="My discord profile">
+							alt="My discord profile"/>
 					</a></li>
 				<li class="inline m-2 mail"><a href="mailto:odinbeuchat.ob@ikmail.com">
-						<img src="../assets/icons/mail-icon.png"
-							class="max-w-xs max-h-xs w-full grayscale hover:grayscale-0 transition-all" alt="Email me!">
+						<nuxt-img format="avif" src="/assets/icons/mail-icon.png"
+							class="max-w-xs max-h-xs w-full grayscale hover:grayscale-0 transition-all" alt="Email me!"/>
 					</a></li>
 			</ul>
 		</nav>
