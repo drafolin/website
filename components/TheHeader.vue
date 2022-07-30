@@ -11,12 +11,14 @@ const messages = {
 		projectsMenu: 'Projects',
 		resume: 'Resume',
 		toggleFR: 'Toggle to Fr',
+    menuButton: 'Open/close menu'
 	},
 	fr: {
 		home: 'Accueil',
 		projectsMenu: 'Projet',
 		resume: 'CV',
 		toggleFR: 'Activer En',
+    menuButton: 'Ouvrir/fermer le menu'
 	}
 }
 
@@ -82,7 +84,7 @@ const toggleMenu = (open?: boolean) => {
 					</NuxtLink>
 				</li>
 				<li class="align-middle h-fit">
-					<button class="px-3 py-3 m-1 rounded-3xl bg-violet-700/20 hover:bg-violet-700/80 hover:text-white"
+					<button :aria-label="t('menuButton')" class="px-3 py-3 m-1 rounded-3xl bg-violet-700/20 hover:bg-violet-700/80 hover:text-white"
 						@click="locale = locale === 'fr' ? 'en' : 'fr'">
 						{{ t("toggleFR") }}
 					</button>
@@ -99,7 +101,7 @@ const toggleMenu = (open?: boolean) => {
 					alt="Image of my sona, eyesopener.">
 			</NuxtLink>
 
-			<button @click="toggleMenu()" class="hamburger">
+			<button :aria-label="t('menuButton')" @click="toggleMenu()" class="hamburger">
 				<span class="block h-1 mb-2 rounded-full bg-neutral-700 dark:bg-white w-7"></span>
 				<span class="block h-1 mb-2 rounded-full bg-neutral-700 dark:bg-white w-7"></span>
 				<span class="block h-1 rounded-full bg-neutral-700 dark:bg-white w-7"></span>
