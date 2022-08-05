@@ -92,7 +92,7 @@
   }
 
   body {
-    @apply dark:bg-dark-transparent;
+    @apply dark:bg-dark-transparent overflow-x-hidden;
   }
 
   ol {
