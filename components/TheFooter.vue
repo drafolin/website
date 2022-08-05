@@ -24,27 +24,27 @@ const { t } = i18n;
 		<nav class="self-center w-full max-w-xl">
 			<ul class="flex w-full p-0 m-2 list-none social justify-evenly">
 				<li class="inline m-2 github"><a href="https://github.com/dindin-nibnib">
-						<nuxt-img format="avif" src="/assets/icons/github-icon.png"
+						<nuxt-img sizes="sm:70px" format="avif" src="/assets/icons/github-icon.png"
 							class="w-full max-w-xs transition-all max-h-xs grayscale hover:grayscale-0"
 							alt="My github page" />
 					</a></li>
 				<li class="inline m-2 twitter"><a href="https://twitter.com/dindin_nibnib">
-						<nuxt-img format="avif" src="/assets/icons/twitter-icon.png"
+						<nuxt-img sizes="sm:70px" format="avif" src="/assets/icons/twitter-icon.png"
 							class="w-full max-w-xs transition-all max-h-xs grayscale hover:grayscale-0"
 							alt="My twitter page" />
 					</a></li>
 				<li class="inline m-2 telegram"><a href="https://t.me/dindin_nibnib">
-						<nuxt-img format="avif" src="/assets/icons/telegram-icon.png"
+						<nuxt-img sizes="sm:70px" format="avif" src="/assets/icons/telegram-icon.png"
 							class="w-full max-w-xs transition-all max-h-xs grayscale hover:grayscale-0"
 							alt="My telegram account" />
 					</a></li>
 				<li class="inline m-2 discord"><a href="https://discordapp.com/users/373515998000840714">
-						<nuxt-img format="avif" src="/assets/icons/discord-icon.png"
+						<nuxt-img sizes="sm:70px" format="avif" src="/assets/icons/discord-icon.png"
 							class="w-full max-w-xs transition-all max-h-xs grayscale hover:grayscale-0"
 							alt="My discord profile" />
 					</a></li>
 				<li class="inline m-2 mail"><a href="mailto:odinbeuchat.ob@ikmail.com">
-						<nuxt-img format="avif" src="/assets/icons/mail-icon.png"
+						<nuxt-img sizes="sm:70px" format="avif" src="/assets/icons/mail-icon.png"
 							class="w-full max-w-xs transition-all max-h-xs grayscale hover:grayscale-0"
 							alt="Email me!" />
 					</a></li>

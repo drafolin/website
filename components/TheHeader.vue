@@ -11,14 +11,14 @@ const messages = {
 		projectsMenu: 'Projects',
 		resume: 'Resume',
 		toggleFR: 'Toggle to Fr',
-    menuButton: 'Open/close menu'
+		menuButton: 'Open/close menu'
 	},
 	fr: {
 		home: 'Accueil',
 		projectsMenu: 'Projet',
 		resume: 'CV',
 		toggleFR: 'Activer En',
-    menuButton: 'Ouvrir/fermer le menu'
+		menuButton: 'Ouvrir/fermer le menu'
 	}
 }
 
@@ -61,7 +61,8 @@ const toggleMenu = (open?: boolean) => {
 		class="fixed hidden w-full p-4 py-8 shadow-lg bg-paper-white dark:bg-dark-gray dark:shadow-neutral-800 bg- lg:block">
 		<nav class="flex items-center content-center justify-between h-10">
 			<NuxtLink to="/" class="flex items-center text-white">
-				<nuxt-img provider="vercel" format="avif" width="2.5rem" src="/assets/dindin-lightweight.png" class="h-10 rounded-full"
+				<nuxt-img sizes="sm:40px" provider="vercel" format="avif" width="2.5rem"
+					src="/assets/dindin-lightweight.png" class="h-10 rounded-full"
 					alt="Image of my sona, eyesopener." />
 				<span class="ml-4">dindin|nibnib</span>
 			</NuxtLink>
@@ -84,7 +85,8 @@ const toggleMenu = (open?: boolean) => {
 					</NuxtLink>
 				</li>
 				<li class="align-middle h-fit">
-					<button :aria-label="t('menuButton')" class="px-3 py-3 m-1 rounded-3xl bg-violet-700/20 hover:bg-violet-700/80 hover:text-white"
+					<button :aria-label="t('menuButton')"
+						class="px-3 py-3 m-1 rounded-3xl bg-violet-700/20 hover:bg-violet-700/80 hover:text-white"
 						@click="locale = locale === 'fr' ? 'en' : 'fr'">
 						{{ t("toggleFR") }}
 					</button>
@@ -98,7 +100,7 @@ const toggleMenu = (open?: boolean) => {
 		<nav class="flex items-center content-center justify-between h-10 px-5">
 			<NuxtLink to="/" class="flex items-center text-white">
 				<nuxt-img format="avif" src="/assets/dindin-lightweight.png" class="h-10 rounded-full"
-					alt="Image of my sona, eyesopener."/>
+					alt="Image of my sona, eyesopener." />
 			</NuxtLink>
 
 			<button :aria-label="t('menuButton')" @click="toggleMenu()" class="hamburger">
