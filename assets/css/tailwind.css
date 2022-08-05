@@ -6,23 +6,30 @@
   font-family: "Whitney";
   src: local(Whitney),
     url("/assets/fonts/whitneymedium.woff") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Ginto";
   src: local(Ginto), url("/assets/fonts/ginto.woff2") format("woff2");
+  font-display: swap;
+
 }
 
 @font-face {
   font-family: "Ginto Nord";
   src: local("Ginto Nord"),
     url("/assets/fonts/Ginto_Nord.woff2") format("woff2");
+    font-display: swap;
+
 }
 
 @font-face {
   font-family: "Open Sans";
   src: url("https://fonts.gstatic.com/s/opensans/v27/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjr0B4gaVI.woff2")
     format("woff2");
+    font-display: swap;
+
 }
 
 @layer base {
