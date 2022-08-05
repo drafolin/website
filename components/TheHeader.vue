@@ -54,16 +54,15 @@ const toggleMenu = (open?: boolean) => {
 
 <template >
 	<div @click="toggleMenu()"
-		:class="`fixed inset-x-0 bottom-0 top-header-height bg-dark-gray/70 transition-all ${overlayDisplay}`">
+		:class="`fixed inset-x-0 bottom-0 top-hea	der-height bg-dark-gray/70 transition-all ${overlayDisplay}`">
 	</div>
 
 	<header
 		class="fixed hidden w-full p-4 py-8 shadow-lg bg-paper-white dark:bg-dark-gray dark:shadow-neutral-800 bg- lg:block">
 		<nav class="flex items-center content-center justify-between h-10">
 			<NuxtLink to="/" class="flex items-center text-white">
-				<nuxt-img sizes="sm:40px" provider="vercel" format="avif" width="2.5rem"
-					src="/assets/dindin-lightweight.png" class="h-10 rounded-full"
-					alt="Image of my sona, eyesopener." />
+				<nuxt-img provider="vercel" format="avif" width="40" src="/assets/dindin-lightweight.png"
+					class="h-10 rounded-full" alt="Image of my sona, eyesopener." />
 				<span class="ml-4">dindin|nibnib</span>
 			</NuxtLink>
 			<ul class="flex items-center list-none h-fit">
