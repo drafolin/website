@@ -28,8 +28,8 @@ const messages = {
 			p1: "You can find all of my projects on <a href=\"https://www.github.com/dindin-nibnib\">my GitHub page</a>!",
 			p2: "However, here are a few of my personal projects:",
 			pr1: {
-				title: "Attrac'tifs",
-				p: "I am building a site for the barber salon of one of my family members."
+				title: "wifi.dindin.ch",
+				p: "This website is a plain-text website without ssl certificate. You can use it to get redirected to a captive wifi portal"
 			},
 			pr2: {
 				title: "r/WingsOfFire discord bot",
@@ -64,9 +64,8 @@ const messages = {
 			p1: "Vous pouvez trouver tous mes projets sur <a href=\"https://www.github.com/dindin-nibnib\">mon profil GitHub</a>!",
 			p2: "Mais voici quelques de mes projets personnels:",
 			pr1: {
-				title: "Attrac'tifs",
-				p: "Je suis en train de créer un site de prise de rendez-vous pour le salon de coiffure d'un\
-							membre de ma famille."
+				title: "wifi.dindin.ch",
+				p: "Ce site web est un site web de texte en clair sans certificat SSL. Vous pouvez l'utiliser pour vous rediriger vers un portail wifi captif"
 			},
 			pr2: {
 				title: "Bot discord r/ Wingsoffire",
@@ -103,35 +102,28 @@ const { t } = useI18n({ messages, useScope: 'global' });
 			<p v-html="t('projects.p2')"></p>
 
 			<ul class="m-0 list-none">
-				<li class="p-0">
+				<li class="flex flex-col items-center p-0">
 					<div
-						class="flex flex-col items-center p-5 m-5 bg-red-attractifs/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
-						<nuxt-img format="webp" class="rounded-2xl max-w-60 lg:float-right lg:ml-10 lg:max-w-60"
-							src="/assets/attractifs-preview.png" alt="Preview of the Attrac'tifs website'" />
-						<h3><a href="https://github.com/dindin-nibnib/attractifs" class="text-white"
-								v-html="t('projects.pr1.title')"></a>
+						class="flex flex-col items-center p-5 m-5 border-2 border-white border-solid bg-slate-700/40 lg:overflow-auto lg:w-1/3 rounded-3xl lg:block">
+						<h3 class="w-full text-center"><a href="http://wifi.dindin.ch" target="_blank"
+								class="text-white" v-html="t('projects.pr1.title')"></a>
 						</h3>
 						<p v-html="t('projects.pr1.p')"></p>
 					</div>
 				</li>
-				<li class="p-0">
+				<li class="flex flex-col items-center p-0">
 					<div
-						class="flex flex-col items-center p-5 m-5 bg-discord-blurple/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
-						<nuxt-img format="webp" class="rounded-2xl max-w-60 lg:float-right lg:ml-10 lg:max-w-60"
-							src="/assets/r-wof-bot-screenshot.png" alt="Preview of the discord bot" />
-						<h3><a href="https://github.com/r-wingsoffire/r-wof-bot" class="text-white"
-								v-html="t('projects.pr2.title')"></a></h3>
+						class="flex flex-col items-center p-5 m-5 border-2 border-white border-solid bg-slate-700/40 lg:overflow-auto lg:w-1/3 rounded-3xl lg:block">
+						<h3 class="w-full text-center"><a href="https://github.com/r-wingsoffire/r-wof-bot"
+								class="text-white" v-html="t('projects.pr2.title')"></a></h3>
 						<p v-html="t('projects.pr2.p')"></p>
 					</div>
 				</li>
-				<li class="p-0">
+				<li class="flex flex-col items-center p-0">
 					<div
-						class="flex flex-col items-center p-5 m-5 bg-blue-700/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
-						<nuxt-img format="webp"
-							src="https://cdn.discordapp.com/icons/981917730737360916/2e4e3dccaae4527b96836b7848152253.webp?size=240"
-							class="rounded-2xl max-w-60 lg:float-right lg:ml-10 lg:max-h-60" alt="Icon of cobbalt" />
-						<h3><a href="https://github.com/devs-of-cobbalt/cobbalt" class="text-white"
-								v-html="t('projects.pr3.title')"></a></h3>
+						class="flex flex-col items-center p-5 m-5 border-2 border-white border-solid bg-slate-700/40 lg:overflow-auto lg:w-1/3 rounded-3xl lg:block">
+						<h3 class="w-full text-center"><a href="https://github.com/devs-of-cobbalt/cobbalt"
+								class="text-white" v-html="t('projects.pr3.title')"></a></h3>
 						<p v-html="t('projects.pr3.p')"></p>
 					</div>
 				</li>
