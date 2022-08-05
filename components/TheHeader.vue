@@ -11,14 +11,14 @@ const messages = {
 		projectsMenu: 'Projects',
 		resume: 'Resume',
 		toggleFR: 'Toggle to Fr',
-    menuButton: 'Open/close menu'
+		menuButton: 'Open/close menu'
 	},
 	fr: {
 		home: 'Accueil',
 		projectsMenu: 'Projet',
 		resume: 'CV',
 		toggleFR: 'Activer En',
-    menuButton: 'Ouvrir/fermer le menu'
+		menuButton: 'Ouvrir/fermer le menu'
 	}
 }
 
@@ -54,15 +54,15 @@ const toggleMenu = (open?: boolean) => {
 
 <template >
 	<div @click="toggleMenu()"
-		:class="`fixed inset-x-0 bottom-0 top-header-height bg-dark-gray/70 transition-all ${overlayDisplay}`">
+		:class="`fixed inset-x-0 bottom-0 top-hea	der-height bg-dark-gray/70 transition-all ${overlayDisplay}`">
 	</div>
 
 	<header
 		class="fixed hidden w-full p-4 py-8 shadow-lg bg-paper-white dark:bg-dark-gray dark:shadow-neutral-800 bg- lg:block">
 		<nav class="flex items-center content-center justify-between h-10">
 			<NuxtLink to="/" class="flex items-center text-white">
-				<nuxt-img provider="vercel" format="avif" width="2.5rem" src="/assets/dindin-lightweight.png" class="h-10 rounded-full"
-					alt="Image of my sona, eyesopener." />
+				<nuxt-img provider="vercel" format="avif" width="40" src="/assets/dindin-lightweight.png"
+					class="h-10 rounded-full" alt="Image of my sona, eyesopener." />
 				<span class="ml-4">dindin|nibnib</span>
 			</NuxtLink>
 			<ul class="flex items-center list-none h-fit">
@@ -84,7 +84,8 @@ const toggleMenu = (open?: boolean) => {
 					</NuxtLink>
 				</li>
 				<li class="align-middle h-fit">
-					<button :aria-label="t('menuButton')" class="px-3 py-3 m-1 rounded-3xl bg-violet-700/20 hover:bg-violet-700/80 hover:text-white"
+					<button :aria-label="t('menuButton')"
+						class="px-3 py-3 m-1 rounded-3xl bg-violet-700/20 hover:bg-violet-700/80 hover:text-white"
 						@click="locale = locale === 'fr' ? 'en' : 'fr'">
 						{{ t("toggleFR") }}
 					</button>
@@ -98,7 +99,7 @@ const toggleMenu = (open?: boolean) => {
 		<nav class="flex items-center content-center justify-between h-10 px-5">
 			<NuxtLink to="/" class="flex items-center text-white">
 				<nuxt-img format="avif" src="/assets/dindin-lightweight.png" class="h-10 rounded-full"
-					alt="Image of my sona, eyesopener."/>
+					alt="Image of my sona, eyesopener." />
 			</NuxtLink>
 
 			<button :aria-label="t('menuButton')" @click="toggleMenu()" class="hamburger">
