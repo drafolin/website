@@ -28,10 +28,10 @@ module.exports = {
         xs: "70px"
       },
       backgroundImage: {
-        "dragon-bg": "url(https://i.imgur.com/4oFKBnF.jpeg)",
+        "dragon-bg": "url(https://i.imgur.com/4oFKBnF.webp)",
       },
       fontFamily: {
-        sans: ["Whitney", "Bahnschrift", "Helvetica", "sans-serif"],
+        sans: [ "Whitney", "Bahnschrift", "Helvetica", "sans-serif"],
         boldest: ["Ginto Nord", "Whitney", "Arial", "sans-serif"]
       },
       animation: {
