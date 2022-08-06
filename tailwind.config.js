@@ -3,6 +3,9 @@ module.exports = {
   content: [],
   theme: {
     extend: {
+      opacity: {
+        '85': '0.85',
+      },
       colors: {
         "light-violet": "#7655e3",
         "dark-gray": "#23272a",
@@ -31,7 +34,7 @@ module.exports = {
         "dragon-bg": "url(https://i.imgur.com/4oFKBnF.webp)",
       },
       fontFamily: {
-        sans: [ "Whitney", "Bahnschrift", "Helvetica", "sans-serif"],
+        sans: ["Whitney", "Bahnschrift", "Helvetica", "sans-serif"],
         boldest: ["Ginto Nord", "Whitney", "Arial", "sans-serif"]
       },
       animation: {
