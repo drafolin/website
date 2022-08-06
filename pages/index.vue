@@ -104,7 +104,7 @@ const { t } = useI18n({ messages, useScope: 'global' });
 			<ul class="m-0 list-none">
 				<li class="flex flex-col items-center p-0">
 					<div
-						class="flex flex-col items-center p-5 m-5 border-2 border-white border-solid bg-slate-800/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
+						class="flex flex-col items-center p-5 m-5 border-2 border-solid border-slate-800 dark:border-white bg-slate-400/40 dark:bg-slate-800/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
 						<h3 class="w-full text-center">
 							<NuxtLink to="http://wifi.dindin.ch" target="_blank" class="text-black dark:text-white">
 								{{ t('projects.pr1.title') }}</NuxtLink>
@@ -114,7 +114,7 @@ const { t } = useI18n({ messages, useScope: 'global' });
 				</li>
 				<li class="flex flex-col items-center p-0">
 					<div
-						class="flex flex-col items-center p-5 m-5 border-2 border-white border-solid bg-slate-800/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
+						class="flex flex-col items-center p-5 m-5 border-2 border-solid border-slate-800 dark:border-white bg-slate-400/40 dark:bg-slate-800/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
 						<h3 class="w-full text-center">
 							<NuxtLink to="https://github.com/r-wingsoffire/r-wof-bot"
 								class="text-black dark:text-white">{{ t('projects.pr2.title') }}</NuxtLink>
@@ -124,10 +124,10 @@ const { t } = useI18n({ messages, useScope: 'global' });
 				</li>
 				<li class="flex flex-col items-center p-0">
 					<div
-						class="flex flex-col items-center p-5 m-5 border-2 border-white border-solid bg-slate-800/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
+						class="flex flex-col items-center p-5 m-5 border-2 border-solid border-slate-800 dark:border-white bg-slate-400/40 dark:bg-slate-800/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
 						<h3 class="w-full text-center">
 							<NuxtLink to="https://github.com/devs-of-cobbalt/cobbalt"
-								class="text-black dark:text-white">t('projects.pr3.title')</NuxtLink>
+								class="text-black dark:text-white">{{ t('projects.pr3.title') }}</NuxtLink>
 						</h3>
 						<p v-html="t('projects.pr3.p')"></p>
 					</div>

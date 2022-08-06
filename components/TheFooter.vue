@@ -50,10 +50,10 @@ const { t } = i18n;
 					</a></li>
 			</ul>
 		</nav>
-		<span class="self-center mt-4 text-xs dark:text-gray-400 lg:text-sm">This site is a work in progress! Some pages
+		<span class="self-center mt-4 text-xs dark:text-gray-300 lg:text-sm">This site is a work in progress! Some pages
 			might not be existing for now...</span><br />
 		<hr class="w-screen" />
-		<span class="self-center my-4 text-xs dark:text-gray-400 lg:text-sm">
+		<span class="self-center my-4 text-xs dark:text-gray-300 lg:text-sm">
 			<NuxtLink to="mailto:mail@dindin.ch">&copy;2021-2022 - dindin|nibnib</NuxtLink>
 		</span>
 	</footer>
