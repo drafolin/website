@@ -104,7 +104,7 @@ const { t } = useI18n({ messages, useScope: 'global' });
 			<ul class="m-0 list-none">
 				<li class="flex flex-col items-center p-0">
 					<div
-						class="flex flex-col items-center p-5 m-5 border-2 border-white border-solid bg-slate-700/40 lg:overflow-auto lg:w-1/3 rounded-3xl lg:block">
+						class="flex flex-col items-center p-5 m-5 border-2 border-white border-solid bg-slate-800/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
 						<h3 class="w-full text-center"><a href="http://wifi.dindin.ch" target="_blank"
 								class="text-white" v-html="t('projects.pr1.title')"></a>
 						</h3>
@@ -113,7 +113,7 @@ const { t } = useI18n({ messages, useScope: 'global' });
 				</li>
 				<li class="flex flex-col items-center p-0">
 					<div
-						class="flex flex-col items-center p-5 m-5 border-2 border-white border-solid bg-slate-700/40 lg:overflow-auto lg:w-1/3 rounded-3xl lg:block">
+						class="flex flex-col items-center p-5 m-5 border-2 border-white border-solid bg-slate-800/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
 						<h3 class="w-full text-center"><a href="https://github.com/r-wingsoffire/r-wof-bot"
 								class="text-white" v-html="t('projects.pr2.title')"></a></h3>
 						<p v-html="t('projects.pr2.p')"></p>
@@ -121,7 +121,7 @@ const { t } = useI18n({ messages, useScope: 'global' });
 				</li>
 				<li class="flex flex-col items-center p-0">
 					<div
-						class="flex flex-col items-center p-5 m-5 border-2 border-white border-solid bg-slate-700/40 lg:overflow-auto lg:w-1/3 rounded-3xl lg:block">
+						class="flex flex-col items-center p-5 m-5 border-2 border-white border-solid bg-slate-800/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
 						<h3 class="w-full text-center"><a href="https://github.com/devs-of-cobbalt/cobbalt"
 								class="text-white" v-html="t('projects.pr3.title')"></a></h3>
 						<p v-html="t('projects.pr3.p')"></p>
