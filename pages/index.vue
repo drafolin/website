@@ -106,8 +106,8 @@ const { t } = useI18n({ messages, useScope: 'global' });
 					<div
 						class="flex flex-col items-center p-5 m-5 border-2 border-white border-solid bg-slate-800/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
 						<h3 class="w-full text-center">
-							<NuxtLink to="http://wifi.dindin.ch" target="_blank" class="text-black dark:text-white"
-								v-html="t('projects.pr1.title')" />
+							<NuxtLink to="http://wifi.dindin.ch" target="_blank" class="text-black dark:text-white">
+								{{ t('projects.pr1.title') }}</NuxtLink>
 						</h3>
 						<p v-html="t('projects.pr1.p')"></p>
 					</div>
@@ -116,8 +116,8 @@ const { t } = useI18n({ messages, useScope: 'global' });
 					<div
 						class="flex flex-col items-center p-5 m-5 border-2 border-white border-solid bg-slate-800/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
 						<h3 class="w-full text-center">
-							<NuxtLink to="https://github.com/r-wingsoffire/r-wof-bot" class="text-black dark:text-white"
-								v-html="t('projects.pr2.title')" />
+							<NuxtLink to="https://github.com/r-wingsoffire/r-wof-bot"
+								class="text-black dark:text-white">{{ t('projects.pr2.title') }}</NuxtLink>
 						</h3>
 						<p v-html="t('projects.pr2.p')"></p>
 					</div>
@@ -126,8 +126,8 @@ const { t } = useI18n({ messages, useScope: 'global' });
 					<div
 						class="flex flex-col items-center p-5 m-5 border-2 border-white border-solid bg-slate-800/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
 						<h3 class="w-full text-center">
-							<NuxtLink to="https://github.com/devs-of-cobbalt/cobbalt" class="text-black dark:text-white"
-								v-html="t('projects.pr3.title')" />
+							<NuxtLink to="https://github.com/devs-of-cobbalt/cobbalt"
+								class="text-black dark:text-white">t('projects.pr3.title')</NuxtLink>
 						</h3>
 						<p v-html="t('projects.pr3.p')"></p>
 					</div>
