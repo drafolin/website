@@ -10,7 +10,7 @@ useHead({
 <template>
   <div class="font-sans bg-fixed bg-center bg-cover bg-dragon-bg dark:text-white">
     <TheHeader />
-    <div class="p-0 pt-24 bg-white/60 dark:bg-slate-800/85 lg:px-56">
+    <div class="p-0 pt-24 bg-slate-300/85 dark:bg-slate-800/85 lg:px-56">
       <slot />
       <TheFooter />
     </div>

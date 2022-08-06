@@ -23,7 +23,7 @@ const messages = {
 }
 
 const { t, locale } = useI18n({ messages, useScope: 'global' });
-const menuDivStyle = ref("fixed drop-shadow-lg bg-paper-white dark:bg-dark-gray py-10 inset-x-0 z-m1 -top-full");
+const menuDivStyle = ref("fixed drop-shadow-lg bg-slate-300 dark:bg-dark-gray py-10 inset-x-0 z-m1 -top-full");
 const overlayDisplay = ref("opacity-0 hidden");
 var menuOpened = false;
 
@@ -39,10 +39,10 @@ watch(() => route.path, () => {
 const toggleMenu = (open?: boolean) => {
 	if (open === undefined ? !menuOpened : open) {
 		overlayDisplay.value = "opacity-100";
-		menuDivStyle.value = "fixed shadow-sandwiched bg-paper-white dark:bg-dark-gray py-10 inset-x-0 transition-all animate-menu-close-anim";
+		menuDivStyle.value = "fixed shadow-sandwiched bg-slate-300 dark:bg-dark-gray py-10 inset-x-0 transition-all animate-menu-close-anim";
 	} else {
 		overlayDisplay.value = "opacity-0";
-		menuDivStyle.value = "fixed shadow-sandwiched bg-paper-white dark:bg-dark-gray py-10 inset-x-0 transition-all animate-menu-open-anim";
+		menuDivStyle.value = "fixed shadow-sandwiched bg-slate-300 dark:bg-dark-gray py-10 inset-x-0 transition-all animate-menu-open-anim";
 		setTimeout(() => {
 			overlayDisplay.value = "opacity-0 hidden";
 		}, 150);
@@ -58,7 +58,7 @@ const toggleMenu = (open?: boolean) => {
 	</div>
 
 	<header
-		class="fixed hidden w-full p-4 py-8 shadow-lg bg-paper-white dark:bg-dark-gray dark:shadow-neutral-800 bg- lg:block">
+		class="fixed hidden w-full p-4 py-8 shadow-lg bg-slate-300 dark:bg-slate-800 dark:shadow-neutral-800 bg- lg:block">
 		<nav class="flex items-center content-center justify-between h-10">
 			<NuxtLink to="/" class="flex items-center text-black dark:text-white">
 				<nuxt-img provider="vercel" format="avif" width="40" src="/assets/dindin-lightweight.png"
@@ -95,7 +95,7 @@ const toggleMenu = (open?: boolean) => {
 	</header>
 
 	<header
-		class="fixed block w-full p-4 py-8 shadow-lg bg-paper-white dark:bg-dark-gray dark:shadow-neutral-800 lg:hidden">
+		class="fixed block w-full p-4 py-8 shadow-lg bg-slate-300 dark:bg-dark-gray dark:shadow-neutral-800 lg:hidden">
 		<nav class="flex items-center content-center justify-between h-10 px-5">
 			<NuxtLink to="/" class="flex items-center text-white">
 				<nuxt-img format="avif" src="/assets/dindin-lightweight.png" class="h-10 rounded-full"
