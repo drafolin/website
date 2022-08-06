@@ -60,7 +60,7 @@ const toggleMenu = (open?: boolean) => {
 	<header
 		class="fixed hidden w-full p-4 py-8 shadow-lg bg-paper-white dark:bg-dark-gray dark:shadow-neutral-800 bg- lg:block">
 		<nav class="flex items-center content-center justify-between h-10">
-			<NuxtLink to="/" class="flex items-center text-white">
+			<NuxtLink to="/" class="flex items-center text-black dark:text-white">
 				<nuxt-img provider="vercel" format="avif" width="40" src="/assets/dindin-lightweight.png"
 					class="h-10 rounded-full" alt="Image of my sona, eyesopener." />
 				<span class="ml-4">dindin|nibnib</span>

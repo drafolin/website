@@ -67,7 +67,7 @@
   }
 
   :not(header) a {
-    @apply text-white transition-all hover:text-light-violet;
+    @apply text-black transition-all hover:text-light-violet dark:text-white;
   }
 
   p {
