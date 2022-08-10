@@ -57,7 +57,7 @@ const messages = {
 			p2: "Dans la vie, mon nom est Odin, et j'adore les dragons!\
 				J'ai un sona, qui, bien sur est un dragon.\
 				Une aile de nuit, plus précisément, qui s'appelle Eyesopener!\
-				Ah, et je suis hyperactif\
+				Ah, et je suis hyperactif.\
 				Je parle anglais et français",
 			p3: "Mes pronons sont il/lui, n'hésitez pas à me parler en privé!"
 		},
