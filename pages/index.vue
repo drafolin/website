@@ -19,7 +19,8 @@ const messages = {
 
 			p2: "On my irl life, the name's Odin, and I am a dragon lover.\
 				I am a furry, and my sona, of course, is a dragon.\
-				To be more precise, it's a nigthwing, and the name's Eyesopener!",
+				To be more precise, it's a nigthwing, and the name's Eyesopener!\
+				Oh, btw, I have adhd.",
 			p3: "My pronouns are he/ him, birthday's on the 5th of October.\
 				Don't hesitate to dm me by the way!"
 		},
@@ -56,6 +57,7 @@ const messages = {
 			p2: "Dans la vie, mon nom est Odin, et j'adore les dragons!\
 				J'ai un sona, qui, bien sur est un dragon.\
 				Une aile de nuit, plus précisément, qui s'appelle Eyesopener!\
+				Ah, et je suis hyperactif\
 				Je parle anglais et français",
 			p3: "Mes pronons sont il/lui, n'hésitez pas à me parler en privé!"
 		},
