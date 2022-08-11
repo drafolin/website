@@ -1,3 +1,9 @@
+<script setup lang="ts">
+definePageMeta({
+	title: "Not found - dindin|nibnib"
+})
+</script>
+
 <template>
 	<main class="flex flex-col items-center p-4">
 		<div class="my-44">

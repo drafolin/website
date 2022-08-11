@@ -2,7 +2,8 @@
 import { useI18n } from 'vue-i18n';
 
 definePageMeta({
-	layout: "default"
+	layout: "default",
+	title: "Home - dindin|nibnib"
 })
 
 const messages = {
