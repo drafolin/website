@@ -106,34 +106,40 @@ const { t } = useI18n({ messages, useScope: 'global' });
 
 			<ul class="m-0 list-none">
 				<li class="flex flex-col items-center p-0">
-					<div
-						class="flex flex-col items-center p-5 m-5 border-2 border-solid border-slate-800 dark:border-white bg-slate-400/40 dark:bg-slate-800/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
-						<h3 class="w-full text-center">
-							<NuxtLink to="http://wifi.dindin.ch" target="_blank" class="text-black dark:text-white">
-								{{ t('projects.pr1.title') }}</NuxtLink>
-						</h3>
-						<p v-html="t('projects.pr1.p')"></p>
-					</div>
+					<NuxtLink to="http://wifi.dindin.ch" target="_blank"
+						class="w-full m-5 text-black md:w-5/6 lg:w-2/3 dark:text-white">
+						<div
+							class="flex flex-col items-center p-5 border-2 border-solid border-slate-800 dark:border-white bg-slate-400/40 dark:bg-slate-800/40 lg:overflow-auto rounded-3xl lg:block">
+							<h3 class="w-full text-center">
+								{{ t('projects.pr1.title') }}
+							</h3>
+							<p v-html="t('projects.pr1.p')" class="text-white"></p>
+						</div>
+					</NuxtLink>
 				</li>
 				<li class="flex flex-col items-center p-0">
-					<div
-						class="flex flex-col items-center p-5 m-5 border-2 border-solid border-slate-800 dark:border-white bg-slate-400/40 dark:bg-slate-800/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
-						<h3 class="w-full text-center">
-							<NuxtLink to="https://github.com/r-wingsoffire/r-wof-bot"
-								class="text-black dark:text-white">{{ t('projects.pr2.title') }}</NuxtLink>
-						</h3>
-						<p v-html="t('projects.pr2.p')"></p>
-					</div>
+					<NuxtLink to="https://github.com/r-wingsoffire/r-wof-bot" target="_blank"
+						class="w-full m-5 text-black md:w-5/6 lg:w-2/3 dark:text-white">
+						<div
+							class="flex flex-col items-center p-5 border-2 border-solid border-slate-800 dark:border-white bg-slate-400/40 dark:bg-slate-800/40 lg:overflow-auto rounded-3xl lg:block">
+							<h3 class="w-full text-center">
+								{{ t('projects.pr2.title') }}
+							</h3>
+							<p class="text-white" v-html="t('projects.pr2.p')"></p>
+						</div>
+					</NuxtLink>
 				</li>
 				<li class="flex flex-col items-center p-0">
-					<div
-						class="flex flex-col items-center p-5 m-5 border-2 border-solid border-slate-800 dark:border-white bg-slate-400/40 dark:bg-slate-800/40 lg:overflow-auto lg:w-1/2 rounded-3xl lg:block">
-						<h3 class="w-full text-center">
-							<NuxtLink to="https://github.com/devs-of-cobbalt/cobbalt"
-								class="text-black dark:text-white">{{ t('projects.pr3.title') }}</NuxtLink>
-						</h3>
-						<p v-html="t('projects.pr3.p')"></p>
-					</div>
+					<NuxtLink to="https://github.com/devs-of-cobbalt/cobbalt"
+						class="w-full m-5 text-black md:w-5/6 lg:w-2/3 dark:text-white">
+						<div
+							class="flex flex-col items-center p-5 border-2 border-solid border-slate-800 dark:border-white bg-slate-400/40 dark:bg-slate-800/40 lg:overflow-auto rounded-3xl lg:block">
+							<h3 class="w-full text-center">
+								{{ t('projects.pr3.title') }}
+							</h3>
+							<p class="text-white" v-html="t('projects.pr3.p')"></p>
+						</div>
+					</NuxtLink>
 				</li>
 			</ul>
 		</section>
