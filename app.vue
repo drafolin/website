@@ -7,7 +7,8 @@ const { locale } = useI18n({ useScope: 'global' });
 useHead({
   meta: [
     { name: "description", content: "Hi there! Am dindin|nibnib!" },
-    { name: "charset", content: "utf-8" }
+    { name: "charset", content: "utf-8" },
+    { name: "theme-color", content: "#4700d2"}
   ],
   htmlAttrs: {
     lang: locale.value,
