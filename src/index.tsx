@@ -10,8 +10,9 @@ const Index = () => {
 			<section>
 				<h2>Introduction</h2>
 				<p>
-					Hey there! My name's <strong>dindin|nibnib</strong>.
-					Though you can call me dindin, the "|nibnib" part is silent!
+					Hey there! My name's <strong>dindin</strong>.
+					Don't be surprised if you find me under the name of <strong>dindin|nibnib</strong> in some places,
+					I often use that name because dindin is already taken in most places.
 					I am an IT guy that programs loads of random things!
 					The language I use the most is ts (please don't hurt me), though I also know python and c++
 				</p>
