@@ -79,15 +79,6 @@ const Root = () => {
 							</a>
 						</li>
 						<li >
-							<a href="https://twitter.com/dindin_nibnib">
-								<img
-									width="70"
-									src="/assets/icons/twitter-icon.png"
-									alt="My twitter page"
-								/>
-							</a>
-						</li>
-						<li >
 							<a href="https://t.me/dindin_nibnib">
 								<img
 									width="70"
