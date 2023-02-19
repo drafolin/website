@@ -79,15 +79,6 @@ const Root = () => {
 							</a>
 						</li>
 						<li >
-							<a href="https://twitter.com/dindin_nibnib">
-								<img
-									width="70"
-									src="/assets/icons/twitter-icon.png"
-									alt="My twitter page"
-								/>
-							</a>
-						</li>
-						<li >
 							<a href="https://t.me/dindin_nibnib">
 								<img
 									width="70"
@@ -132,7 +123,7 @@ const Root = () => {
 				<hr />
 				<span >
 					<Link to="mailto:mail@dindin.ch">
-						&copy;2021-2022 - dindin|nibnib
+						&copy;2021-2023 - dindin|nibnib
 					</Link>
 				</span>
 			</footer>
