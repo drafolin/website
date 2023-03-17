@@ -18,10 +18,9 @@ const Index = () => {
 				</p>
 				<p>
 					On my irl life, the name's Odin, and I am a dragon lover.
-					I am a furry, and my sona, of course, is a dragon.
-					To be more precise, it's a nigthwing, and the name's Eyesopener!
+					I am a furry, proud to be, and my sona, of course, is a dragon.
+					To be more precise, it's a nightwing, and the name's Eyesopener!
 					It could also be noted that I have ADHD!
-					Oh, one last think while i'm at it, I am a furry, and I am proud of it!
 				</p>
 				<p>
 					What is there else to say... Well, just to clarify, my pronouns are he/him,
