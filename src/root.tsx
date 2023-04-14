@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 
 const Root = () => {
@@ -12,6 +12,10 @@ const Root = () => {
 			setScrolled(false);
 		}
 	};
+
+	useEffect(() => {
+		document.body.style.overflow = menu ? "hidden" : "auto";
+	});
 
 	return (
 		<>
@@ -30,16 +34,10 @@ const Root = () => {
 							<li>
 								<Link to="/">Home</Link>
 							</li>
-							<li>
-								<Link to="/projects">Projects</Link>
-							</li>
-							<li>
-								<Link to="/cv">Resume</Link>
-							</li>
 						</ul>
 
 						<button
-							onClick={() => setMenu(!menu)}
+							onClick={() => setMenu(true)}
 							aria-label="Menu"
 							className="hamburger"
 						>
@@ -51,26 +49,6 @@ const Root = () => {
 								<line x1={5} y1={17} x2={25} y2={17} strokeWidth={2} />
 							</svg>
 						</button>
-
-						<div className={`wrap-menu ${menu ? "active" : ""}`}>
-							<ul>
-								<li>
-									<Link to="/">
-										<strong >Home</strong>
-									</Link>
-								</li>
-								<li>
-									<Link to="/projects">
-										<strong >Projects</strong>
-									</Link>
-								</li>
-								<li>
-									<Link to="/cv">
-										<strong >Resume</strong>
-									</Link>
-								</li>
-							</ul>
-						</div>
 					</nav>
 				</div>
 			</header>
@@ -137,13 +115,33 @@ const Root = () => {
 					now...
 				</span>
 				<br />
-				<hr />
 				<span >
 					<a href="mailto:mail@dindin.ch">
 						&copy;2021-2023 - dindin|nibnib
 					</a>
 				</span>
 			</footer>
+			<div className={`wrap-menu ${menu ? "active" : ""}`}>
+				<button
+					onClick={() => setMenu(!menu)}
+					aria-label="Menu"
+					className="close"
+				>
+					<svg version="1.1"
+						width="30" height="30"
+						xmlns="http://www.w3.org/2000/svg">
+						<line x1={2} y1={2} x2={28} y2={28} strokeWidth={2} />
+						<line x1={28} y1={2} x2={2} y2={28} strokeWidth={2} />
+					</svg>
+				</button>
+				<ul>
+					<li>
+						<Link to="/" onClick={() => setMenu(false)}>
+							<strong >Home</strong>
+						</Link>
+					</li>
+				</ul>
+			</div>
 		</>
 	);
 };

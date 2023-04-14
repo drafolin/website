@@ -75,7 +75,7 @@ body {
         height: 5rem;
 
         .header-wrapper nav {
-          padding: 0 6rem;
+          padding: 0 4.5rem;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -134,12 +134,18 @@ body {
 
             li {
               margin: 0 1em;
-              font-size: 1.2em;
-              font-weight: 600;
-              transition: color 0.2s ease-in-out;
+              a {
+                font-size: 1.2em;
+                font-weight: 600;
+                transition: color 0.2s ease-in-out;
 
-              &:hover {
-                color: $light-accent;
+                &:hover {
+                  color: black;
+
+                  @media (prefers-color-scheme: dark) {
+                    color: $paper-white;
+                  }
+                }
               }
             }
 
@@ -165,21 +171,82 @@ body {
               display: block;
             }
           }
+        }
+      }
+    }
 
-          .wrap-menu {
-            display: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100vh;
-            width: 100vw;
-            backdrop-filter: blur(10px);
+    .wrap-menu {
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      justify-content: center;
+      align-items: center;
+      -webkit-transition: opacity 600ms, visibility 600ms;
+      transition: opacity 600ms, visibility 600ms;
 
-            &.active {
-              display: block;
-            }
+      button.close {
+        position: absolute;
+        top: 2rem;
+        right: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        z-index: 2;
+
+        svg {
+          line {
+            stroke: $dark-gray;
+            stroke-linecap: round;
           }
         }
+      }
+
+      ul {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        max-height: 70%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        li {
+          margin: 1.5em 0;
+          border-radius: 0.5em;
+          font-size: 2em;
+          font-weight: 600;
+          transition: background-color 0.2s ease-in-out;
+
+          &:hover {
+            background-color: rgba($light-accent, 0.2);
+          }
+
+          a {
+            padding: 0.5em 1em;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+
+      &.active {
+        visibility: visible;
+        opacity: 1;
       }
     }
 
