@@ -54,6 +54,17 @@ body {
     }
   }
 
+  svg {
+    line {
+      stroke: $dark-gray;
+      stroke-linecap: round;
+
+      @media (prefers-color-scheme: dark) {
+        stroke: $paper-white;
+      }
+    }
+  }
+
   // !SECTION
 
   // SECTION Content rules
@@ -160,13 +171,6 @@ body {
             background: none;
             cursor: pointer;
 
-            svg {
-              line {
-                stroke: $dark-gray;
-                stroke-linecap: round;
-              }
-            }
-
             @media screen and (max-width: 1024px) {
               display: block;
             }
@@ -198,13 +202,6 @@ body {
         background: none;
         cursor: pointer;
         z-index: 2;
-
-        svg {
-          line {
-            stroke: $dark-gray;
-            stroke-linecap: round;
-          }
-        }
       }
 
       ul {
