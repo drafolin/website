@@ -8,6 +8,9 @@ const MenuLinks = ({ setMenu }: { setMenu: (state: boolean) => void; }) =>
 			<li>
 				<Link to="/" onClick={() => setMenu(false)}>Home</Link>
 			</li>
+			<li>
+				<Link to="/about" onClick={() => setMenu(false)}>About</Link>
+			</li>
 		</ul>
 	</>;
 
