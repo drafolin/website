@@ -1,61 +1,64 @@
-import { useState } from "react";
+import { useEffect, useState, SetStateAction } from "react";
+import type { Dispatch } from "react";
 import { Outlet, Link } from "react-router-dom";
+
+const MenuLinks = ({ setMenu }: { setMenu: (state: boolean) => void; }) =>
+	<>
+		<ul>
+			<li>
+				<Link to="/" onClick={() => setMenu(false)}>Home</Link>
+			</li>
+		</ul>
+	</>;
+
 
 const Root = () => {
 	const [menu, setMenu] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
+
+	window.onscroll = () => {
+		if (window.pageYOffset > 10) {
+			setScrolled(true);
+		} else {
+			setScrolled(false);
+		}
+	};
+
+	useEffect(() => {
+		document.body.style.overflow = menu ? "hidden" : "auto";
+	});
+
 	return (
 		<>
-			<header>
-				<nav>
-					<Link to="/">
-						<img
-							src="/assets/dindin-lightweight.png"
-							alt="Image of my sona, eyesopener."
-						/>
-						<span className="ml-4">dindin|nibnib</span>
-					</Link>
-					<ul>
-						<li>
-							<Link to="/">Home</Link>
-						</li>
-						<li>
-							<Link to="/projects">Projects</Link>
-						</li>
-						<li>
-							<Link to="/cv">Resume</Link>
-						</li>
-					</ul>
+			<header className={scrolled ? "scrolled" : ""}>
+				<div className="header-wrapper">
+					<nav>
+						<div className="mobile-spacer"></div>
+						<Link className="logo" to="/">
+							<img
+								src="/assets/dindin-lightweight.png"
+								alt="My pfp."
+							/>
+							<span className="ml-4">dindin</span>
+						</Link>
 
-					<button
-						onClick={() => setMenu(!menu)}
-						aria-label="Menu"
-						className="hamburger"
-					>
-						<span />
-						<span />
-						<span />
-					</button>
+						<MenuLinks setMenu={setMenu} />
 
-					<div className={`wrapMenu ${menu ? "active" : ""}`}>
-						<ul>
-							<li>
-								<Link to="/">
-									<strong >Home</strong>
-								</Link>
-							</li>
-							<li>
-								<Link to="/projects">
-									<strong >Projects</strong>
-								</Link>
-							</li>
-							<li>
-								<Link to="/cv">
-									<strong >Resume</strong>
-								</Link>
-							</li>
-						</ul>
-					</div>
-				</nav>
+						<button
+							onClick={() => setMenu(true)}
+							aria-label="Menu"
+							className="hamburger"
+						>
+							<svg version="1.1"
+								width="30" height="18"
+								xmlns="http://www.w3.org/2000/svg">
+								<line x1={5} y1={1} x2={25} y2={1} strokeWidth={2} />
+								<line x1={5} y1={9} x2={25} y2={9} strokeWidth={2} />
+								<line x1={5} y1={17} x2={25} y2={17} strokeWidth={2} />
+							</svg>
+						</button>
+					</nav>
+				</div>
 			</header>
 
 			<main>
@@ -120,13 +123,27 @@ const Root = () => {
 					now...
 				</span>
 				<br />
-				<hr />
 				<span >
-					<Link to="mailto:mail@dindin.ch">
+					<a href="mailto:mail@dindin.ch">
 						&copy;2021-2023 - dindin|nibnib
-					</Link>
+					</a>
 				</span>
 			</footer>
+			<div className={`wrap-menu ${menu ? "active" : ""}`}>
+				<button
+					onClick={() => setMenu(!menu)}
+					aria-label="Menu"
+					className="close"
+				>
+					<svg version="1.1"
+						width="30" height="30"
+						xmlns="http://www.w3.org/2000/svg">
+						<line x1={2} y1={2} x2={28} y2={28} strokeWidth={2} />
+						<line x1={28} y1={2} x2={2} y2={28} strokeWidth={2} />
+					</svg>
+				</button>
+				<MenuLinks setMenu={setMenu} />
+			</div>
 		</>
 	);
 };
