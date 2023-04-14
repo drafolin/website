@@ -248,7 +248,31 @@ body {
 
     main {
       margin-top: 6rem;
-      height: 100vh;
+      height: calc(100vh - 6rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        h1 {
+          font-size: 3em;
+          font-weight: 800;
+          margin: 0;
+          line-height: 1.2em;
+          margin-bottom: 0.5em;
+
+          @media (max-width: 1024px) {
+            font-size: 2em;
+          }
+        }
+      }
     }
 
     footer {
