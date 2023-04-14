@@ -4,7 +4,7 @@ const Index = () => {
 	return (
 		<>
 			<h1>
-				Hi! Here's <strong>dindin</strong>, all <span className={"fire"}>fire</span> and brimstone for computer science!
+				Your local tech derg <strong>dindin</strong> here!
 			</h1>
 		</>
 	);

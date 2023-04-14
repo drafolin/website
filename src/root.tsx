@@ -122,9 +122,9 @@ const Root = () => {
 				<br />
 				<hr />
 				<span >
-					<Link to="mailto:mail@dindin.ch">
+					<a href="mailto:mail@dindin.ch">
 						&copy;2021-2023 - dindin|nibnib
-					</Link>
+					</a>
 				</span>
 			</footer>
 		</>

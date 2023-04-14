@@ -1,11 +1,11 @@
-$light-violet: #7655e3;
+$light-accent: #7655e3;
 $dark-gray: #23272a;
 $dark-transparent: #23272acc;
 $transparent-violet: #7655e322;
-$discord-blurple: #5865f2;
-$paper-white: #dad8d7;
+$paper-white: #f3f3f3;
 $light-gray: #2e3438;
-$blurple: #828cf6;
+
+// SECTION Global rules
 * {
   box-sizing: border-box;
 
@@ -24,17 +24,38 @@ $blurple: #828cf6;
     src: url("/assets/fonts/bahnschrift.ttf") format("truetype");
   }
 }
+// !SECTION
 
 body {
+  // SECTION Element rules
   font-family: "Futura", "Bahnschrift", "Whitney", sans-serif;
   overflow-x: hidden;
   margin: 0;
+  background-color: $paper-white;
 
   @media (prefers-color-scheme: dark) {
     background-color: $dark-gray;
     color: $paper-white;
   }
 
+  h1 {
+    strong {
+      color: $light-accent;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $light-accent;
+
+    &:hover {
+      color: $light-accent;
+    }
+  }
+
+  // !SECTION
+
+  // SECTION Content rules
   #root {
     display: flex;
     flex-direction: column;
@@ -48,11 +69,33 @@ body {
         }
       }
     }
-  }
 
-  h1 {
-    strong {
-      color: $light-violet;
+    footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4em 1em;
+      nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: space-between;
+
+        li {
+          margin: 0 1em;
+
+          img {
+            max-height: 5em;
+            filter: grayscale(1);
+            transition: filter 0.2s ease-in-out;
+
+            &:hover {
+              filter: grayscale(0);
+            }
+          }
+        }
+      }
     }
   }
+  // !SECTION
 }
