@@ -1,5 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, SetStateAction } from "react";
+import type { Dispatch } from "react";
 import { Outlet, Link } from "react-router-dom";
+
+const MenuLinks = ({ setMenu }: { setMenu: (state: boolean) => void; }) =>
+	<>
+		<ul>
+			<li>
+				<Link to="/" onClick={() => setMenu(false)}>Home</Link>
+			</li>
+		</ul>
+	</>;
+
 
 const Root = () => {
 	const [menu, setMenu] = useState(false);
@@ -30,11 +41,8 @@ const Root = () => {
 							/>
 							<span className="ml-4">dindin</span>
 						</Link>
-						<ul>
-							<li>
-								<Link to="/">Home</Link>
-							</li>
-						</ul>
+
+						<MenuLinks setMenu={setMenu} />
 
 						<button
 							onClick={() => setMenu(true)}
@@ -134,13 +142,7 @@ const Root = () => {
 						<line x1={28} y1={2} x2={2} y2={28} strokeWidth={2} />
 					</svg>
 				</button>
-				<ul>
-					<li>
-						<Link to="/" onClick={() => setMenu(false)}>
-							<strong >Home</strong>
-						</Link>
-					</li>
-				</ul>
+				<MenuLinks setMenu={setMenu} />
 			</div>
 		</>
 	);
