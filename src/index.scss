@@ -1,3 +1,4 @@
+@use "sass:color";
 $light-accent: #7655e3;
 $dark-gray: #23272a;
 $dark-transparent: #23272acc;
@@ -62,17 +63,45 @@ body {
     min-height: 100vh;
 
     header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 6rem;
+
+      &.scrolled {
+        background-color: color.mix($paper-white, $light-gray, 90%);
+        box-shadow: 0 0.5rem 1rem $transparent-violet;
+        height: 5rem;
+
+        .header-wrapper nav {
+          padding: 0 6rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+          background-color: color.mix($dark-gray, $light-gray, 90%);
+        }
+      }
+      transition: all cubic-bezier(0.4, 0, 0.2, 1) 150ms;
+
       div.header-wrapper {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
         nav {
           max-width: 1024px;
           display: flex;
           justify-content: space-between;
           margin: 0 auto;
           padding: 0 4rem;
+          width: 100%;
+          transition: all cubic-bezier(0.4, 0, 0.2, 1) 150ms;
 
           @media (max-width: 1024px) {
-            padding: 1em 2rem;
+            padding: 1em 1rem;
           }
 
           div.mobile-spacer {
@@ -88,6 +117,7 @@ body {
               max-height: 2em;
               border-radius: 100%;
               align-self: center;
+              margin: 0 0.5em;
 
               & + span {
                 align-self: center;
@@ -124,17 +154,38 @@ body {
             background: none;
             cursor: pointer;
 
-            & + div {
-              display: none;
-              position: absolute;
+            svg {
+              line {
+                stroke: $dark-gray;
+                stroke-linecap: round;
+              }
             }
 
             @media screen and (max-width: 1024px) {
               display: block;
             }
           }
+
+          .wrap-menu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            backdrop-filter: blur(10px);
+
+            &.active {
+              display: block;
+            }
+          }
         }
       }
+    }
+
+    main {
+      margin-top: 6rem;
+      height: 100vh;
     }
 
     footer {

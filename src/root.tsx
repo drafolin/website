@@ -3,11 +3,20 @@ import { Outlet, Link } from "react-router-dom";
 
 const Root = () => {
 	const [menu, setMenu] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
+
+	window.onscroll = () => {
+		if (window.pageYOffset > 10) {
+			setScrolled(true);
+		} else {
+			setScrolled(false);
+		}
+	};
+
 	return (
 		<>
-			<header>
+			<header className={scrolled ? "scrolled" : ""}>
 				<div className="header-wrapper">
-
 					<nav>
 						<div className="mobile-spacer"></div>
 						<Link className="logo" to="/">
@@ -34,6 +43,13 @@ const Root = () => {
 							aria-label="Menu"
 							className="hamburger"
 						>
+							<svg version="1.1"
+								width="30" height="18"
+								xmlns="http://www.w3.org/2000/svg">
+								<line x1={5} y1={1} x2={25} y2={1} strokeWidth={2} />
+								<line x1={5} y1={9} x2={25} y2={9} strokeWidth={2} />
+								<line x1={5} y1={17} x2={25} y2={17} strokeWidth={2} />
+							</svg>
 						</button>
 
 						<div className={`wrap-menu ${menu ? "active" : ""}`}>
