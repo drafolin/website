@@ -6,56 +6,57 @@ const Root = () => {
 	return (
 		<>
 			<header>
-				<nav>
-					<Link to="/">
-						<img
-							src="/assets/dindin-lightweight.png"
-							alt="Image of my sona, eyesopener."
-						/>
-						<span className="ml-4">dindin|nibnib</span>
-					</Link>
-					<ul>
-						<li>
-							<Link to="/">Home</Link>
-						</li>
-						<li>
-							<Link to="/projects">Projects</Link>
-						</li>
-						<li>
-							<Link to="/cv">Resume</Link>
-						</li>
-					</ul>
+				<div className="header-wrapper">
 
-					<button
-						onClick={() => setMenu(!menu)}
-						aria-label="Menu"
-						className="hamburger"
-					>
-						<span />
-						<span />
-						<span />
-					</button>
-
-					<div className={`wrapMenu ${menu ? "active" : ""}`}>
+					<nav>
+						<div className="mobile-spacer"></div>
+						<Link className="logo" to="/">
+							<img
+								src="/assets/dindin-lightweight.png"
+								alt="My pfp."
+							/>
+							<span className="ml-4">dindin</span>
+						</Link>
 						<ul>
 							<li>
-								<Link to="/">
-									<strong >Home</strong>
-								</Link>
+								<Link to="/">Home</Link>
 							</li>
 							<li>
-								<Link to="/projects">
-									<strong >Projects</strong>
-								</Link>
+								<Link to="/projects">Projects</Link>
 							</li>
 							<li>
-								<Link to="/cv">
-									<strong >Resume</strong>
-								</Link>
+								<Link to="/cv">Resume</Link>
 							</li>
 						</ul>
-					</div>
-				</nav>
+
+						<button
+							onClick={() => setMenu(!menu)}
+							aria-label="Menu"
+							className="hamburger"
+						>
+						</button>
+
+						<div className={`wrap-menu ${menu ? "active" : ""}`}>
+							<ul>
+								<li>
+									<Link to="/">
+										<strong >Home</strong>
+									</Link>
+								</li>
+								<li>
+									<Link to="/projects">
+										<strong >Projects</strong>
+									</Link>
+								</li>
+								<li>
+									<Link to="/cv">
+										<strong >Resume</strong>
+									</Link>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
 			</header>
 
 			<main>
