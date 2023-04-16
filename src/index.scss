@@ -1,11 +1,5 @@
+@use "consts";
 @use "sass:color";
-$light-accent: #7655e3;
-$dark-gray: #23272a;
-$dark-transparent: #23272acc;
-$transparent-violet: #7655e322;
-$paper-white: #f3f3f3;
-$light-gray: #2e3438;
-
 // SECTION Global rules
 * {
   box-sizing: border-box;
@@ -32,35 +26,35 @@ body {
   font-family: "Futura", "Bahnschrift", "Whitney", sans-serif;
   overflow-x: hidden;
   margin: 0;
-  background-color: $paper-white;
+  background-color: consts.$paper-white;
 
   @media (prefers-color-scheme: dark) {
-    background-color: $dark-gray;
-    color: $paper-white;
+    background-color: consts.$dark-gray;
+    color: consts.$paper-white;
   }
 
   h1 {
     strong {
-      color: $light-accent;
+      color: consts.$light-accent;
     }
   }
 
   a {
     text-decoration: none;
-    color: $light-accent;
+    color: consts.$light-accent;
 
     &:hover {
-      color: $light-accent;
+      color: consts.$light-accent;
     }
   }
 
   svg {
     line {
-      stroke: $dark-gray;
+      stroke: consts.$dark-gray;
       stroke-linecap: round;
 
       @media (prefers-color-scheme: dark) {
-        stroke: $paper-white;
+        stroke: consts.$paper-white;
       }
     }
   }
@@ -81,8 +75,12 @@ body {
       height: 6rem;
 
       &.scrolled {
-        background-color: color.mix($paper-white, $light-gray, 90%);
-        box-shadow: 0 0.5rem 1rem $transparent-violet;
+        background-color: color.mix(
+          consts.$paper-white,
+          consts.$light-gray,
+          90%
+        );
+        box-shadow: 0 0.5rem 1rem consts.$transparent-violet;
         height: 5rem;
 
         .header-wrapper nav {
@@ -90,7 +88,11 @@ body {
         }
 
         @media (prefers-color-scheme: dark) {
-          background-color: color.mix($dark-gray, $light-gray, 90%);
+          background-color: color.mix(
+            consts.$dark-gray,
+            consts.$light-gray,
+            90%
+          );
         }
       }
       transition: all cubic-bezier(0.4, 0, 0.2, 1) 150ms;
@@ -154,7 +156,7 @@ body {
                   color: black;
 
                   @media (prefers-color-scheme: dark) {
-                    color: $paper-white;
+                    color: consts.$paper-white;
                   }
                 }
               }
@@ -226,7 +228,7 @@ body {
           transition: background-color 0.2s ease-in-out;
 
           &:hover {
-            background-color: rgba($light-accent, 0.2);
+            background-color: rgba(consts.$light-accent, 0.2);
           }
 
           a {

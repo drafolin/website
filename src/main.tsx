@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import RootLayout from "./root";
-import Index from "./index";
-import AboutPage from "./aboutPage";
+import Index from "./page";
+import AboutPage from "./about/page";
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
