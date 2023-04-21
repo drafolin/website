@@ -39,10 +39,10 @@ const Root = () => {
 						<div className="mobile-spacer"></div>
 						<Link className="logo" to="/">
 							<img
-								src="/assets/dindin-lightweight.png"
+								src="/assets/drafolin-lightweight.png"
 								alt="My pfp."
 							/>
-							<span className="ml-4">dindin</span>
+							<span className="ml-4">Dråfølin</span>
 						</Link>
 
 						<MenuLinks setMenu={setMenu} />
@@ -75,7 +75,7 @@ const Root = () => {
 				<nav>
 					<ul>
 						<li>
-							<a href="https://github.com/dindin-nibnib">
+							<a href="https://github.com/drafolin">
 								<img
 									width="70"
 									src="/assets/icons/github-icon.png"
@@ -85,7 +85,7 @@ const Root = () => {
 							</a>
 						</li>
 						<li >
-							<a href="https://t.me/dindin_nibnib">
+							<a href="https://t.me/drafolin">
 								<img
 									width="70"
 									src="/assets/icons/telegram-icon.png"
@@ -103,7 +103,7 @@ const Root = () => {
 							</a>
 						</li>
 						<li >
-							<a href="mailto:mail@dindin.ch">
+							<a href="mailto:derg@drafolin.ch">
 								<img
 									width="70"
 									src="/assets/icons/mail-icon.png"
@@ -112,7 +112,7 @@ const Root = () => {
 							</a>
 						</li>
 						<li >
-							<a rel="me" href="https://derg.social/@dindin">
+							<a rel="me" href="https://derg.social/@drafolin">
 								<img
 									src="/assets/icons/mastodon-icon.svg"
 									alt="My mastodon account"
@@ -127,8 +127,8 @@ const Root = () => {
 				</span>
 				<br />
 				<span >
-					<a href="mailto:mail@dindin.ch">
-						&copy;2021-2023 - dindin|nibnib
+					<a href="mailto:derg@drafolin.ch">
+						&copy;2021-2023 - Dråfølin
 					</a>
 				</span>
 			</footer>

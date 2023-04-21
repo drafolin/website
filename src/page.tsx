@@ -26,7 +26,7 @@ const Index = () => {
 		<>
 			<div className="hero">
 				<h1>
-					Your local tech derg <strong>dindin</strong> here!
+					Your local tech derg <strong>Dråfølin</strong> here!
 				</h1>
 				<p>
 					Hi and welcome to my website! Have a look around!
