@@ -9,8 +9,8 @@ const AboutPage = () => {
 			<p>
 				I'm just a regular dragon who likes to code and make websites (mostly)!
 				<br />
-				More precisely though, I'm a 16 year old computer science student from Switzerland who
-				is a huge fan of dergs, which is why I made it my sona!
+				More precisely though, I'm swiss computer science student who
+				is a huge fan of dergs, which is why I made my sona one!
 				<br />
 				It's a bit hard to describe myself, but I'll try my best!
 				<br />
