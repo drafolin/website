@@ -1,5 +1,5 @@
-import { useEffect, useState, SetStateAction } from "react";
-import type { Dispatch } from "react";
+import { useEffect, useState } from "react";
+import MD5 from "crypto-js/md5";
 import { Outlet, Link } from "react-router-dom";
 
 const MenuLinks = ({ setMenu }: { setMenu: (state: boolean) => void; }) =>
@@ -31,6 +31,8 @@ const Root = () => {
 		document.body.style.overflow = menu ? "hidden" : "auto";
 	});
 
+	const mailHash = MD5("derg@drafolin.ch".trim().toLowerCase()).toString()
+
 	return (
 		<>
 			<header className={scrolled ? "scrolled" : ""}>
@@ -39,7 +41,7 @@ const Root = () => {
 						<div className="mobile-spacer"></div>
 						<Link className="logo" to="/">
 							<img
-								src="/assets/drafolin-lightweight.png"
+								src={`https://www.gravatar.com/avatar/${mailHash}?s=64`}
 								alt="My pfp."
 							/>
 							<span className="ml-4">Dråfølin</span>
