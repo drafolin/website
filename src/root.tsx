@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, {useEffect, useRef, useState} from "react";
 import MD5 from "crypto-js/md5";
 import { Outlet, Link } from "react-router-dom";
 
@@ -18,6 +18,24 @@ const MenuLinks = ({ setMenu }: { setMenu: (state: boolean) => void; }) =>
 const Root = () => {
 	const [menu, setMenu] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
+	const [mousePos, setMousePos] = useState({x:0,y:0})
+	const blurSquare = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const updateMousePos = (event: MouseEvent) => {
+			setMousePos({ x: event.clientX, y: event.clientY });
+			if (blurSquare.current === null)
+				return;
+			blurSquare.current.style.top = `${event.clientY}px`;
+			blurSquare.current.style.left = `${event.clientX}px`;
+		};
+
+		document.addEventListener('mousemove', updateMousePos);
+
+		return () => {
+			document.removeEventListener('mousemove', updateMousePos);
+		};
+	}, []);
 
 	window.onscroll = () => {
 		if (window.pageYOffset > 10) {
@@ -65,6 +83,8 @@ const Root = () => {
 					</nav>
 				</div>
 			</header>
+
+			<div className={"color-blur"} ref={blurSquare}/>
 
 			<main>
 				<div>

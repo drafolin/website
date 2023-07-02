@@ -234,6 +234,17 @@ body {
       }
     }
 
+    .color-blur {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      filter: blur(5px);
+
+      transform: translateX(-50%) translateY(-50%);
+
+      border: 1px solid red;
+    }
+
     main {
       margin-top: 6rem;
       height: calc(100vh - 6rem);
