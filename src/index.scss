@@ -19,6 +19,7 @@
     src: url("/assets/fonts/bahnschrift.ttf") format("truetype");
   }
 }
+
 // !SECTION
 
 body {
@@ -48,6 +49,7 @@ body {
       text-decoration: underline;
     }
   }
+
   // !SECTION
 
   // SECTION Content rules
@@ -64,26 +66,19 @@ body {
       height: 6rem;
 
       &.scrolled {
-        background-color: color.mix(
-          consts.$light-background,
-          consts.$dark-background,
-          90%
-        );
         box-shadow: 0 0.5rem 1rem opacify(consts.$accent, .8);
         height: 5rem;
+        background-color: consts.$dark-background;
+
+        @media (prefers-color-scheme: light) {
+          background-color: consts.$light-background;
+        }
 
         .header-wrapper nav {
           padding: 0 4.5rem;
         }
-
-        @media (prefers-color-scheme: dark) {
-          background-color: color.mix(
-            consts.$dark-background,
-            consts.$light-background,
-            90%
-          );
-        }
       }
+
       transition: all cubic-bezier(0.4, 0, 0.2, 1) 150ms;
 
       div.header-wrapper {
@@ -115,6 +110,7 @@ body {
 
           a.logo {
             display: flex;
+
             img {
               max-height: 2em;
               border-radius: 100%;
@@ -136,6 +132,7 @@ body {
 
             li {
               margin: 0 1em;
+
               a {
                 font-size: 1.2em;
                 font-weight: 600;
@@ -316,5 +313,6 @@ body {
       }
     }
   }
+
   // !SECTION
 }
