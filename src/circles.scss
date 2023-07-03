@@ -1,0 +1,52 @@
+.color-blur {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  filter: blur(50px);
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none; // add this line
+  z-index: -1;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  * {
+    pointer-events: none; // add this line
+  }
+}
+
+$opacityDurations: 4s, 6s, 9s, 12s, 14s;
+$scaleDurations: 5s, 8s, 11s, 14s, 18s;
+
+@for $i from 1 through 5 {
+  @keyframes circle#{$i}OpacityAnimation {
+    0%, 100% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: .75;
+    }
+  }
+
+  @keyframes circle#{$i}ScaleAnimation {
+    0%, 100% {
+      r: 40;
+    }
+    50% {
+      r: 50;
+    }
+  }
+
+  #circle#{$i} {
+    // Choose duration from the lists
+    $opacityAnimationDuration: nth($opacityDurations, $i);
+    $scaleAnimationDuration: nth($scaleDurations, $i);
+
+    animation:
+            circle#{$i}OpacityAnimation $opacityAnimationDuration  cubic-bezier(0, 0, 0.58, 1) infinite,
+            circle#{$i}ScaleAnimation $scaleAnimationDuration cubic-bezier(0, 0, 0.58, 1) infinite;
+  }
+}

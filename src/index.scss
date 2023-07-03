@@ -3,6 +3,7 @@
 // SECTION Global rules
 * {
   box-sizing: border-box;
+  overflow-x: hidden;
 
   @font-face {
     font-family: "Whitney";
@@ -25,10 +26,10 @@
 body {
   // SECTION Element rules
   font-family: "Futura", "Bahnschrift", "Whitney", sans-serif;
-  overflow-x: hidden;
   margin: 0;
   background-color: consts.$dark-background;
   color: consts.$dark-text;
+  z-index: -2;
 
   @media (prefers-color-scheme: light) {
     background-color: consts.$light-background;
@@ -57,6 +58,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    z-index: 0;
 
     header {
       position: fixed;
@@ -232,17 +234,6 @@ body {
         visibility: visible;
         opacity: 1;
       }
-    }
-
-    .color-blur {
-      width: 200px;
-      height: 200px;
-      position: absolute;
-      filter: blur(5px);
-
-      transform: translateX(-50%) translateY(-50%);
-
-      border: 1px solid red;
     }
 
     main {
