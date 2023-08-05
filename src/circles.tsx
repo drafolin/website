@@ -33,7 +33,7 @@ function Circles() {
 
     const updateMousePos = (event: MouseEvent) => {
       target.x = event.clientX;
-      target.y = event.clientY;
+      target.y = event.clientY + scrollY;
     };
 
     const loop = () => {
