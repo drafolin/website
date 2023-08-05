@@ -123,7 +123,7 @@ const Root = () => {
               <a rel="me" href="https://derg.social/@drafolin">
                 <img
                   src="/assets/icons/mastodon-icon.svg"
-                  alt="My mastodon account"
+                  alt="My fediverse account"
                 />
               </a>
             </li>
