@@ -19,9 +19,6 @@ const MenuLinks = ({setMenu}: { setMenu: (state: boolean) => void; }) =>
 const Root = () => {
   const [menu, setMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const blurSquare = useRef<HTMLDivElement>(null);
-
-
 
   window.onscroll = () => {
     if (window.pageYOffset > 10) {
