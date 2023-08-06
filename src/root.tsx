@@ -83,7 +83,7 @@ const Root = () => {
               <a href="https://github.com/drafolin">
                 <img
                   width="70"
-                  src="/assets/icons/github-icon.png"
+                  src="/assets/icons/github-icon.svg"
 
                   alt="My github page"
                 />
@@ -93,7 +93,7 @@ const Root = () => {
               <a href="https://t.me/drafolin">
                 <img
                   width="70"
-                  src="/assets/icons/telegram-icon.png"
+                  src="/assets/icons/telegram-icon.svg"
                   alt="My telegram account"
                 />
               </a>
@@ -102,7 +102,7 @@ const Root = () => {
               <a href="https://discordapp.com/users/373515998000840714">
                 <img
                   width="70"
-                  src="/assets/icons/discord-icon.png"
+                  src="/assets/icons/discord-icon.svg"
                   alt="My discord profile"
                 />
               </a>
@@ -111,7 +111,7 @@ const Root = () => {
               <a href="mailto:derg@drafolin.ch">
                 <img
                   width="70"
-                  src="/assets/icons/mail-icon.png"
+                  src="/assets/icons/mail-icon.svg"
                   alt="Email me!"
                 />
               </a>
