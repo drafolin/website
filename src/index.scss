@@ -3,6 +3,7 @@
 // SECTION Global rules
 * {
   box-sizing: border-box;
+  overflow-x: hidden;
 
   @font-face {
     font-family: "Whitney";
@@ -19,43 +20,34 @@
     src: url("/assets/fonts/bahnschrift.ttf") format("truetype");
   }
 }
+
 // !SECTION
 
 body {
   // SECTION Element rules
   font-family: "Futura", "Bahnschrift", "Whitney", sans-serif;
-  overflow-x: hidden;
   margin: 0;
-  background-color: consts.$paper-white;
+  background-color: consts.$dark-background;
+  color: consts.$dark-text;
+  z-index: -2;
 
-  @media (prefers-color-scheme: dark) {
-    background-color: consts.$dark-gray;
-    color: consts.$paper-white;
+  @media (prefers-color-scheme: light) {
+    background-color: consts.$light-background;
+    color: consts.$light-text;
   }
 
   h1 {
     strong {
-      color: consts.$light-accent;
+      color: consts.$accent;
     }
   }
 
   a {
     text-decoration: none;
-    color: consts.$light-accent;
+    color: consts.$accent;
 
     &:hover {
-      color: consts.$light-accent;
-    }
-  }
-
-  svg {
-    line {
-      stroke: consts.$dark-gray;
-      stroke-linecap: round;
-
-      @media (prefers-color-scheme: dark) {
-        stroke: consts.$paper-white;
-      }
+      text-decoration: underline;
     }
   }
 
@@ -66,6 +58,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    z-index: 0;
 
     header {
       position: fixed;
@@ -75,26 +68,19 @@ body {
       height: 6rem;
 
       &.scrolled {
-        background-color: color.mix(
-          consts.$paper-white,
-          consts.$light-gray,
-          90%
-        );
-        box-shadow: 0 0.5rem 1rem consts.$transparent-violet;
+        box-shadow: 0 0.5rem 1rem opacify(consts.$accent, .8);
         height: 5rem;
+        background-color: consts.$dark-background;
+
+        @media (prefers-color-scheme: light) {
+          background-color: consts.$light-background;
+        }
 
         .header-wrapper nav {
           padding: 0 4.5rem;
         }
-
-        @media (prefers-color-scheme: dark) {
-          background-color: color.mix(
-            consts.$dark-gray,
-            consts.$light-gray,
-            90%
-          );
-        }
       }
+
       transition: all cubic-bezier(0.4, 0, 0.2, 1) 150ms;
 
       div.header-wrapper {
@@ -126,6 +112,7 @@ body {
 
           a.logo {
             display: flex;
+
             img {
               max-height: 2em;
               border-radius: 100%;
@@ -147,6 +134,7 @@ body {
 
             li {
               margin: 0 1em;
+
               a {
                 font-size: 1.2em;
                 font-weight: 600;
@@ -156,7 +144,7 @@ body {
                   color: black;
 
                   @media (prefers-color-scheme: dark) {
-                    color: consts.$paper-white;
+                    color: consts.$dark-text;
                   }
                 }
               }
@@ -228,7 +216,7 @@ body {
           transition: background-color 0.2s ease-in-out;
 
           &:hover {
-            background-color: rgba(consts.$light-accent, 0.2);
+            background-color: rgba(consts.$accent, 0.2);
           }
 
           a {
@@ -266,9 +254,8 @@ body {
         h1 {
           font-size: 3em;
           font-weight: 800;
-          margin: 0;
           line-height: 1.2em;
-          margin-bottom: 0.5em;
+          margin: 0 0 0.5em;
 
           @media (max-width: 1024px) {
             font-size: 2em;
@@ -328,5 +315,6 @@ body {
       }
     }
   }
+
   // !SECTION
 }
