@@ -283,32 +283,39 @@ body {
         padding: 2em 1em;
       }
 
-      nav ul {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        justify-content: space-between;
-        padding: 0;
+      nav {
+        ul {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          padding: 0;
+          list-style: none;
+          grid-row-gap: .75em;
+          grid-column-gap: .5em;
 
-        li {
-          margin: 0 1em;
-
-          @media screen and (max-width: 1024px) {
-            margin: 0 0.5em;
+          @media screen and (min-width: 500px) {
+            grid-template-columns: repeat(6, 1fr);
           }
 
-          img {
-            max-height: 5em;
-            filter: grayscale(1);
-            transition: filter 0.2s ease-in-out;
+          li {
+            margin: 0 1em;
 
             @media screen and (max-width: 1024px) {
-              max-height: 3em;
-              width: auto;
+              margin: 0 0.5em;
             }
 
-            &:hover {
-              filter: grayscale(0);
+            img {
+              max-height: 5em;
+              filter: grayscale(1);
+              transition: filter 0.2s ease-in-out;
+
+              @media screen and (max-width: 1024px) {
+                max-height: 3em;
+                width: auto;
+              }
+
+              &:hover {
+                filter: grayscale(0);
+              }
             }
           }
         }

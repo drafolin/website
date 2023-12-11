@@ -2,6 +2,12 @@ import React, {useEffect, useState} from "react";
 import MD5 from "crypto-js/md5";
 import {Outlet, Link} from "react-router-dom";
 import Circles from "./circles";
+import GitHubIcon from "~/assets/icons/github-icon.svg";
+import TelegramIcon from "~/assets/icons/telegram-icon.svg";
+import DiscordIcon from "~/assets/icons/discord-icon.svg";
+import MailIcon from "~/assets/icons/mail-icon.svg";
+import MastodonIcon from "~/assets/icons/mastodon-icon.svg";
+import BSkyIcon from "~/assets/icons/bluesky-icon.png";
 
 const MenuLinks = ({setMenu}: { setMenu: (state: boolean) => void; }) =>
   <>
@@ -80,29 +86,34 @@ const Root = () => {
         <nav>
           <ul>
             <li>
-              <a href="https://github.com/drafolin">
+              <a
+                href="https://github.com/drafolin"
+                target="_blank">
                 <img
                   width="70"
-                  src="/assets/icons/github-icon.svg"
-
+                  src={GitHubIcon}
                   alt="My github page"
                 />
               </a>
             </li>
             <li>
-              <a href="https://t.me/drafolin">
+              <a
+                href="https://t.me/drafolin"
+                target="_blank">
                 <img
                   width="70"
-                  src="/assets/icons/telegram-icon.svg"
+                  src={TelegramIcon}
                   alt="My telegram account"
                 />
               </a>
             </li>
             <li>
-              <a href="https://discordapp.com/users/373515998000840714">
+              <a
+                href="https://discordapp.com/users/373515998000840714"
+                target="_blank">
                 <img
                   width="70"
-                  src="/assets/icons/discord-icon.svg"
+                  src={DiscordIcon}
                   alt="My discord profile"
                 />
               </a>
@@ -111,16 +122,30 @@ const Root = () => {
               <a href="mailto:derg@drafolin.ch">
                 <img
                   width="70"
-                  src="/assets/icons/mail-icon.svg"
+                  src={MailIcon}
                   alt="Email me!"
                 />
               </a>
             </li>
             <li>
-              <a rel="me" href="https://derg.social/@drafolin">
+              <a
+                rel="me"
+                href="https://derg.social/@drafolin"
+                target="_blank">
                 <img
-                  src="/assets/icons/mastodon-icon.svg"
+                  width="70"
+                  src={MastodonIcon}
                   alt="My fediverse account"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://bsky.app/profile/drafolin.ch"
+                target="_blank">
+                <img
+                  src={BSkyIcon}
+                  alt="My bluesky account!"
                 />
               </a>
             </li>
