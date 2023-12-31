@@ -13,6 +13,7 @@ const AboutPage = () => {
 			<p>
 				More precisely though, I'm a {age} year old Swiss computer science student who
 				is a huge fan of dergs, which is why I made my sona one!
+				My pronouns are <a href="https://en.pronouns.page/@drafolin">ílí/it/he</a>.
 			</p>
 			<p>
 				It's a bit hard to describe myself, but I'll try my best!
