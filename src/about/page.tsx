@@ -1,5 +1,5 @@
 const AboutPage = () => {
-	const age = new Date().getFullYear() - new Date("2006-10-05 00:00").getFullYear();
+	const age = new Date(Date.now() - new Date("2006-10-05 00:00").valueOf()).getFullYear() - 1970;
 	return <>
 		<div className="hero">
 			<h1>About Me</h1>
