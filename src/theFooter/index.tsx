@@ -7,6 +7,8 @@ import BSkyIcon from "~/assets/icons/bluesky-icon.png";
 import "./style.scss";
 
 export const Component = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer>
       <span>Find me here:</span>
@@ -53,7 +55,9 @@ export const Component = () => {
       </span>
       <br />
       <span>
-        <a href="mailto:derg@drafolin.ch">&copy;2021-2023 - Dråfølin</a>
+        <a href="mailto:derg@drafolin.ch">
+          &copy;2021-{currentYear} - Dråfølin
+        </a>
       </span>
     </footer>
   );
