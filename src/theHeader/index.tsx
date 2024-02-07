@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import MD5 from "crypto-js/md5";
+import "./style.scss";
 
 export const MenuLinks = ({
   setMenu,

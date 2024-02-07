@@ -4,6 +4,7 @@ import DiscordIcon from "~/assets/icons/discord-icon.svg";
 import MailIcon from "~/assets/icons/mail-icon.svg";
 import MastodonIcon from "~/assets/icons/mastodon-icon.svg";
 import BSkyIcon from "~/assets/icons/bluesky-icon.png";
+import "./style.scss";
 
 export const Component = () => {
   return (
