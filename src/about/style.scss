@@ -1,0 +1,64 @@
+body #root main {
+  .hero {
+    .header {
+      width: 100%;
+      max-width: 800px;
+      padding: 3em 0;
+      display: flex;
+      grid-template-rows: 1fr;
+      grid-auto-flow: column;
+      margin-bottom: 3em;
+
+      img {
+        border-radius: 2em;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      .col {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 1em;
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  .display-select {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: .25em;
+
+    button {
+      background-color: #f7f7f7;
+      font-size: 18px;
+      padding: 0.5em 2em;
+      border: none;
+      border-radius: 2em;
+      cursor: pointer;
+      box-shadow: #777 0 0 5px;
+
+      &.active {
+        color: #7655e3;
+        box-shadow: inset #777 0 0 5px;
+      }
+
+      &:hover {
+        box-shadow: inset #777 0 0 5px;
+      }
+    }
+  }
+}
