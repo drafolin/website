@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./style.scss";
-import Pfp from "../components/pfp";
+import Pfp from "../pfp";
 
 export const MenuLinks = ({
 														setMenu,
