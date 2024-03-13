@@ -1,0 +1,46 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4em 1em;
+  text-align: center;
+
+  @media screen and (max-width: 1024px) {
+    padding: 2em 1em;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      padding: 0;
+      list-style: none;
+
+      @media screen and (min-width: 500px) {
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      li {
+        margin: 0 1.25em;
+
+        @media screen and (max-width: 1024px) {
+          margin: 0 0.5em;
+        }
+
+        img {
+          max-height: 5em;
+          filter: grayscale(1);
+          transition: filter 0.2s ease-in-out;
+
+          @media screen and (max-width: 1024px) {
+            max-height: 3em;
+            width: auto;
+          }
+
+          &:hover {
+            filter: grayscale(0);
+          }
+        }
+      }
+    }
+  }
+}
