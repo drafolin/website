@@ -43,31 +43,4 @@ body #root main {
       }
     }
   }
-
-  .display-select {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: .25em;
-
-    button {
-      background-color: #f7f7f7;
-      font-size: 18px;
-      padding: 0.5em 2em;
-      border: none;
-      border-radius: 2em;
-      cursor: pointer;
-      box-shadow: #777 0 0 5px;
-
-      &.active {
-        color: #7655e3;
-        box-shadow: inset #777 0 0 5px;
-      }
-
-      &:hover {
-        box-shadow: inset #777 0 0 5px;
-      }
-    }
-  }
 }
