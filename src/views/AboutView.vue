@@ -52,12 +52,6 @@ const age = new Date(Date.now() - new Date("2006-10-05 00:00").valueOf()).getFul
       </p>
 
       <p>
-        Besides work, I absolutely love dragons, so much that I ended up making myself an Original Character based on
-        Wings of Fire's NightWings. Through this OC, I became part of the Furry Fandom, and found lots of people who
-        had the same centers of interest I did.
-      </p>
-
-      <p>
         I also like reading, playing games and watching videos. Hey, I'm still a regular guy!
       </p>
     </div>
@@ -65,7 +59,7 @@ const age = new Date(Date.now() - new Date("2006-10-05 00:00").valueOf()).getFul
 </template>
 
 <style>
-body #app main {
+body #ap main {
   .hero {
     .header {
       width: 100%;
