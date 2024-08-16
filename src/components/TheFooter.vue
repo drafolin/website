@@ -3,7 +3,6 @@ import GitHubIcon from "@/assets/icons/github-icon.svg";
 import TelegramIcon from "@/assets/icons/telegram-icon.svg";
 import DiscordIcon from "@/assets/icons/discord-icon.svg";
 import MailIcon from "@/assets/icons/mail-icon.svg";
-import MastodonIcon from "@/assets/icons/mastodon-icon.svg";
 
 const currentYear = new Date().getFullYear();
 </script>
@@ -31,11 +30,6 @@ const currentYear = new Date().getFullYear();
         <li>
           <a href="mailto:derg@drafolin.ch">
             <img width="70" :src="MailIcon" alt="Email me!" />
-          </a>
-        </li>
-        <li>
-          <a rel="me" href="https://derg.social/@drafolin" target="_blank">
-            <img width="70" :src="MastodonIcon" alt="My fediverse account" />
           </a>
         </li>
       </ul>
