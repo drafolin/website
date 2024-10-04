@@ -73,7 +73,7 @@ onMounted(() => {
 </template>
 
 <style>
-body #ap main {
+body #app main {
   .hero {
     .header {
       width: 100%;
