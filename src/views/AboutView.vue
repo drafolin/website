@@ -1,6 +1,20 @@
 <script setup lang="ts">
 import Pfp from "../components/ThePfp.vue";
-const age = new Date(Date.now() - new Date("2006-10-05 00:00").valueOf()).getFullYear() - 1970;
+import moment from "moment"
+import { computed, onMounted, ref } from 'vue'
+
+const now = ref(moment())
+const birth = moment("2006-10-05 00:00")
+
+const age = computed(() => now.value.diff(birth, "years"))
+
+const updateNow = () => {
+  now.value = moment()
+}
+
+onMounted(() => {
+  setInterval(updateNow, 1000)
+})
 </script>
 
 <template>
