@@ -78,7 +78,6 @@ footer {
 
         img {
           max-height: 5em;
-          filter: grayscale(1);
           transition: filter 0.2s ease-in-out;
 
           @media screen and (max-width: 1024px) {
@@ -86,8 +85,12 @@ footer {
             width: auto;
           }
 
-          &:hover {
-            filter: grayscale(0);
+          @media screen and (pointer: fine) {
+            filter: grayscale(1);
+
+            &:hover {
+              filter: grayscale(0);
+            }
           }
         }
       }
