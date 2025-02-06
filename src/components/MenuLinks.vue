@@ -1,27 +1,25 @@
 <script setup lang="ts">
 const emit = defineEmits<{
   setMenu: [newVal: boolean]
-
-}>()  
+}>()
 </script>
 
 <template>
   <ul>
     <li>
-      <RouterLink to="/" @click="emit('setMenu', false)">
-        Home
-      </RouterLink>
+      <RouterLink to="/" @click="emit('setMenu', false)"> Home </RouterLink>
     </li>
     <li>
-      <RouterLink to="/about" @click="emit('setMenu', false)">
-        About
-      </RouterLink>
+      <RouterLink to="/about" @click="emit('setMenu', false)"> About </RouterLink>
+    </li>
+    <li>
+      <RouterLink to="/projects" @click="emit('setMenu', false)"> Projects </RouterLink>
     </li>
   </ul>
 </template>
 
 <style lang="scss" scoped>
-@use "@/assets/consts";
+@use '@/assets/consts';
 
 li {
   margin: 0 1em;

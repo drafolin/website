@@ -1,5 +1,5 @@
-@use "consts";
-@use "sass:color";
+@use 'consts';
+@use 'sass:color';
 
 // SECTION Global rules
 * {
@@ -7,18 +7,18 @@
   overflow-x: hidden;
 
   @font-face {
-    font-family: "Whitney";
-    src: url("/fonts/whitneymedium.woff") format("woff");
+    font-family: 'Whitney';
+    src: url('/fonts/whitneymedium.woff') format('woff');
   }
 
   @font-face {
-    font-family: "Futura";
-    src: url("/fonts/futura medium bt.ttf") format("truetype");
+    font-family: 'Futura';
+    src: url('/fonts/futura medium bt.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: "Bahnschrift";
-    src: url("/fonts/bahnschrift.ttf") format("truetype");
+    font-family: 'Bahnschrift';
+    src: url('/fonts/bahnschrift.ttf') format('truetype');
   }
 }
 
@@ -26,7 +26,7 @@
 
 body {
   // SECTION Element rules
-  font-family: "Futura", "Bahnschrift", "Whitney", sans-serif;
+  font-family: 'Futura', 'Bahnschrift', 'Whitney', sans-serif;
   margin: 0;
   background-color: consts.$dark-background;
   color: consts.$dark-text;
@@ -35,6 +35,11 @@ body {
   @media (prefers-color-scheme: light) {
     background-color: consts.$light-background;
     color: consts.$light-text;
+  }
+
+  p {
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
   h1 {
@@ -52,6 +57,11 @@ body {
     }
   }
 
+  button {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
   // !SECTION
 
   // SECTION Content rules
@@ -60,7 +70,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
     z-index: 0;
-
 
     .wrap-menu {
       opacity: 0;
@@ -74,8 +83,12 @@ body {
       -webkit-backdrop-filter: blur(10px);
       justify-content: center;
       align-items: center;
-      -webkit-transition: opacity 600ms, visibility 600ms;
-      transition: opacity 600ms, visibility 600ms;
+      -webkit-transition:
+        opacity 600ms,
+        visibility 600ms;
+      transition:
+        opacity 600ms,
+        visibility 600ms;
 
       button.close {
         position: absolute;
