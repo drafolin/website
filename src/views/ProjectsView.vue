@@ -14,7 +14,7 @@
       >
         <img
           :src="project.image"
-          class="w-2/3 md:w-2/5 mx-auto rounded-lg my-4 md:my-0 flex-shrink-[0]"
+          class="sm:w-2/3 md:w-2/5 mx-auto rounded-lg sm:my-4 md:my-0 flex-shrink-[0]"
         />
 
         <div class="flex flex-col flex-shrink">
