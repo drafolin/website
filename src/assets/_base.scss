@@ -25,52 +25,6 @@
 // !SECTION
 
 body {
-  // SECTION Element rules
-  font-family: 'Futura', 'Bahnschrift', 'Whitney', sans-serif;
-  margin: 0;
-  background-color: consts.$dark-background;
-  color: consts.$dark-text;
-  z-index: -2;
-
-  @media (prefers-color-scheme: light) {
-    background-color: consts.$light-background;
-    color: consts.$light-text;
-  }
-
-  p {
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-
-  h1 {
-    strong {
-      color: consts.$accent;
-    }
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    margin-top: 0.7em;
-    margin-bottom: 0.7em;
-    font-weight: bold;
-  }
-
-  a {
-    text-decoration: none;
-    color: consts.$accent;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  button {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  // !SECTION
-
   // SECTION Content rules
   #app {
     display: flex;

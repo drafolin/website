@@ -8,7 +8,7 @@
       <a
         v-for="(project, i) in projects"
         :key="i"
-        class="group project m-4 rounded-lg border border-drafolin/50 bg-neutral-500/5 transition-all hover:shadow-lg shadow-drafolin/50 p-4 flex flex-col md:flex-row gap-4 items-center"
+        class="group project m-4 rounded-lg border border-drafolin/50 bg-neutral-500/5 transition-all hover:shadow-lg shadow-drafolin/50 px-4 py-6 flex flex-col md:flex-row gap-4 items-center"
         :href="project.link"
         target="_blank"
       >
@@ -17,9 +17,9 @@
           class="sm:w-2/3 md:w-2/5 mx-auto rounded-lg sm:my-4 md:my-0 flex-shrink-[0]"
         />
 
-        <div class="flex flex-col flex-shrink">
-          <h2 class="text-2xl font-bold">{{ project.name }}</h2>
-          <p>{{ project.description }}</p>
+        <div class="flex flex-col flex-shrink justify-around self-stretch">
+          <h2 class="text-2xl font-bold mt-0">{{ project.name }}</h2>
+          <p class="m-0">{{ project.description }}</p>
           <span class="mt-4 text-drafolin group-hover:underline">Checkout this project &rarr;</span>
         </div>
       </a>
