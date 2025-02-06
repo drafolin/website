@@ -1,0 +1,5 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-drafolin: #7655e3;
+}
