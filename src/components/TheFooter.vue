@@ -3,6 +3,7 @@ import GitHubIcon from '@/assets/icons/github-icon.svg'
 import TelegramIcon from '@/assets/icons/telegram-icon.svg'
 import DiscordIcon from '@/assets/icons/discord-icon.svg'
 import MailIcon from '@/assets/icons/mail-icon.svg'
+import MastodonIcon from '@/assets/icons/mastodon-icon.svg'
 
 const currentYear = new Date().getFullYear()
 </script>
