@@ -3,3 +3,50 @@
 @theme {
   --color-drafolin: #7655e3;
 }
+
+@layer base {
+  body {
+    font-family: 'Futura', 'Bahnschrift', 'Whitney', sans-serif;
+    margin: 0;
+    background-color: var(--color-slate-950);
+    color: var(--color-white);
+    z-index: -2;
+  }
+
+  @media (prefers-color-scheme: light) {
+    body {
+      background-color: var(--color-neutral-100);
+      color: var(--color-black);
+    }
+  }
+
+  p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  h1 strong {
+    color: var(--color-drafolin);
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+    font-weight: bold;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--color-drafolin);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  button {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
