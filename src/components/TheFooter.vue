@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import GitHubIcon from "@/assets/icons/github-icon.svg";
-import TelegramIcon from "@/assets/icons/telegram-icon.svg";
-import DiscordIcon from "@/assets/icons/discord-icon.svg";
-import MailIcon from "@/assets/icons/mail-icon.svg";
-import MastodonIcon from "@/assets/icons/mastodon-icon.svg";
+import GitHubIcon from '@/assets/icons/github-icon.svg'
+import TelegramIcon from '@/assets/icons/telegram-icon.svg'
+import DiscordIcon from '@/assets/icons/discord-icon.svg'
+import MailIcon from '@/assets/icons/mail-icon.svg'
+import MastodonIcon from '@/assets/icons/mastodon-icon.svg'
 
-const currentYear = new Date().getFullYear();
+const currentYear = new Date().getFullYear()
 </script>
 
 <template>
   <footer>
     <span>Find me here:</span>
-    <nav>
+    <nav class="my-4">
       <ul>
         <li>
           <a href="https://github.com/drafolin" target="_blank">
@@ -40,15 +40,10 @@ const currentYear = new Date().getFullYear();
         </li>
       </ul>
     </nav>
-    <span>
-      This site is a work in progress! Some pages might not be existing for
-      now...
-    </span>
+    <span> This site is a work in progress! Some pages might not be existing for now... </span>
     <br />
     <span>
-      <a href="mailto:derg@drafolin.ch">
-        &copy;2021-{{ currentYear }} - Dråfølin
-      </a>
+      <a href="mailto:derg@drafolin.ch"> &copy;2021-{{ currentYear }} - Dråfølin </a>
     </span>
   </footer>
 </template>
