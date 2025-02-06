@@ -8,7 +8,7 @@
       <a
         v-for="(project, i) in projects"
         :key="i"
-        class="group project m-4 rounded-lg border border-drafolin/50 bg-gray-900/30 transition-all hover:shadow-lg shadow-drafolin/50 p-4 flex flex-col md:flex-row gap-4 items-center"
+        class="group project m-4 rounded-lg border border-drafolin/50 bg-neutral-500/5 transition-all hover:shadow-lg shadow-drafolin/50 p-4 flex flex-col md:flex-row gap-4 items-center"
         :href="project.link"
         target="_blank"
       >
