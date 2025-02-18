@@ -1,5 +1,13 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import { useHead } from '@unhead/vue'
+
+useHead({
+  link: [
+    { rel: 'canonical', href: 'https://drafolin.ch' }
+  ],
+  title: 'Drafolin - Tech Derg!'
+})
 </script>
 
 <template>
