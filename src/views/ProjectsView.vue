@@ -30,6 +30,14 @@
 <script setup lang="ts">
 import FilamentCollapseImage from '@/assets/images/filament-collapse.jpg'
 import FilamentInverseShield from '@/assets/images/filament-inverse-shield.jpg'
+import { useHead } from '@unhead/vue'
+
+useHead({
+  link: [
+    { rel: 'canonical', href: 'https://derg.ch/projects' }
+  ],
+  title: 'Drafolin - Projects'
+})
 
 type Project = {
   link: string

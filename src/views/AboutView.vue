@@ -2,6 +2,14 @@
 import Pfp from "../components/ThePfp.vue";
 import moment from "moment"
 import { computed, onMounted, ref } from 'vue'
+import { useHead } from '@unhead/vue'
+
+useHead({
+  link: [
+    { rel: 'canonical', href: 'https://derg.ch/about' }
+  ],
+  title: 'Drafolin - About Me'
+})
 
 const now = ref(moment())
 const birth = moment("2006-10-05 00:00")
