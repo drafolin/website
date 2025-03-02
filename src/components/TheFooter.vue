@@ -34,7 +34,7 @@ const currentYear = new Date().getFullYear()
         </li>
       </ul>
     </nav>
-    <span> This site is a work in progress! Some pages might not be existing for now... </span>
+    <span> This site is a work in progress! Some pages might not exist for now... </span>
     <br />
     <span>
       <a href="mailto:derg@drafolin.ch"> &copy;2021-{{ currentYear }} - Dråfølin </a>
